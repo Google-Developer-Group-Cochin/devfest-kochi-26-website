@@ -1,0 +1,120 @@
+[
+  {
+    "start": "09:00",
+    "end": "09:30",
+    "title": "Check-in and breakfast",
+    "kind": "break"
+  },
+  {
+    "start": "09:30",
+    "end": "09:45",
+    "title": "Welcome to DevFest Kochi '26",
+    "kind": "community",
+    "room": "Main hall"
+  },
+  {
+    "start": "09:45",
+    "end": "10:30",
+    "title": "Opening keynote",
+    "kind": "keynote",
+    "room": "Main hall"
+  },
+  {
+    "start": "10:40",
+    "end": "11:10",
+    "title": "Building agents with Gemini",
+    "kind": "talk",
+    "track": "ai",
+    "room": "Main hall"
+  },
+  {
+    "start": "10:40",
+    "end": "11:10",
+    "title": "Shipping secure apps on Cloud Run",
+    "kind": "talk",
+    "track": "cloud",
+    "room": "Hall 2"
+  },
+  {
+    "start": "11:20",
+    "end": "11:50",
+    "title": "Flutter in the agentic era",
+    "kind": "talk",
+    "track": "mobile",
+    "room": "Main hall"
+  },
+  {
+    "start": "11:20",
+    "end": "11:50",
+    "title": "Chrome's built-in AI APIs",
+    "kind": "talk",
+    "track": "web",
+    "room": "Hall 2"
+  },
+  {
+    "start": "12:00",
+    "end": "12:40",
+    "title": "Panel: building responsibly with AI",
+    "kind": "keynote",
+    "room": "Main hall"
+  },
+  {
+    "start": "12:40",
+    "end": "13:30",
+    "title": "Lunch and community lounge",
+    "kind": "break"
+  },
+  {
+    "start": "13:30",
+    "end": "15:00",
+    "title": "Hands-on: your first agent with ADK",
+    "kind": "workshop",
+    "track": "ai",
+    "room": "Lab 1"
+  },
+  {
+    "start": "13:30",
+    "end": "15:00",
+    "title": "Hands-on: Firebase from zero to deployed",
+    "kind": "workshop",
+    "track": "cloud",
+    "room": "Lab 2"
+  },
+  {
+    "start": "13:30",
+    "end": "14:00",
+    "title": "Compose and Gemini on Android",
+    "kind": "talk",
+    "track": "mobile",
+    "room": "Main hall"
+  },
+  {
+    "start": "14:10",
+    "end": "14:40",
+    "title": "Web performance that survives real devices",
+    "kind": "talk",
+    "track": "web",
+    "room": "Main hall"
+  },
+  {
+    "start": "15:15",
+    "end": "16:15",
+    "title": "Lightning talks from the community",
+    "kind": "community",
+    "room": "Main hall"
+  },
+  {
+    "start": "16:15",
+    "end": "16:45",
+    "title": "Closing keynote",
+    "kind": "keynote",
+    "room": "Main hall"
+  },
+  {
+    "start": "16:45",
+    "end": "17:00",
+    "title": "Thank-yous, swag and group photo",
+    "kind": "community",
+    "room": "Main hall"
+  }
+]

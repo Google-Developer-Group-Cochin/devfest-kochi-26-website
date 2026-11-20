@@ -1,0 +1,30 @@
+[
+  {
+    "date": "3 Dec 2023",
+    "title": "DevFest Kochi 2023",
+    "detail": "The Learn. Build. Connect. edition at Rajagiri School of Engineering & Technology, Kakkanad.",
+    "photo": "/memories/2023-group.jpg",
+    "caption": "Full house at RSET, 2023"
+  },
+  {
+    "date": "26 Oct 2024",
+    "title": "DevFest Kochi 2024",
+    "detail": "Talks and hands-on workshops at XIME Kochi, Kalamassery.",
+    "photo": "/memories/2024-group.jpg",
+    "caption": "On the XIME lawn, 2024"
+  },
+  {
+    "date": "1 Nov 2025",
+    "title": "DevFest Kochi 2025",
+    "detail": "A sold-out Kerala Piravi edition at Jain University, Infopark.",
+    "photo": "/memories/2025-group.jpg",
+    "caption": "Under Infopark's trees, 2025"
+  },
+  {
+    "date": "6 Dec 2026",
+    "title": "DevFest Kochi 2026",
+    "detail": "Build, Secure, Scale. You are here.",
+    "photo": "",
+    "caption": ""
+  }
+]

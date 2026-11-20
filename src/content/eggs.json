@@ -1,0 +1,25 @@
+{
+  "iterations": 300000,
+  "eggs": {
+    "timeline": {
+      "salt": "N0Gbx/xz7C/Tn6Zoh7QPgQ==",
+      "iv": "PJ7W6aCx3mGljRjM",
+      "data": "Rp2BYe/bUIFyrla06+Q9tXaW8lki2WjjzReEhAq+9+Qd87oe3Vyj8Wh/jGJlUPDq303A5wpXTDm7fOOerVP8eUesGdMeRK87il6qksqZ"
+    },
+    "badge": {
+      "salt": "IWoZkUc6E6BT2E/gem7ePA==",
+      "iv": "tmfa5s2WeyAQ2Wjk",
+      "data": "VA1ka5rBMfxePkyKCRvhgobqb4rfTxV8VCGZwpbDWMigVbJ+Mevn/0ZzN+wvxW/s2929An/6T4UpY0W6lRo/TVwg1q+syJSa94cBuMn3"
+    },
+    "ferry": {
+      "salt": "WBuovpYIWaD3t5qV+cR4SQ==",
+      "iv": "hYEkaK52m5/69IBg",
+      "data": "O/cR7yGn1XMV/uVWwxZIP8nNp1ZW28vsZxfYI7wjclz6OovP0Po5pr1eO2vtZyThJJEyt8zxkpKb0alNvpjQuQ4uzYc0xuB/HbN+HuXD"
+    },
+    "net": {
+      "salt": "zwb2nTIF9LWWqtKjyRNmwQ==",
+      "iv": "A7TIg4sbkaESwlN6",
+      "data": "mZMISIuzvxc6vdqEKhXG2e0NS2LeIVHW86WgEdG70oX/TtXt50SqxxjqJxkEkrZc8rqZJumNWltMChY="
+    }
+  }
+}

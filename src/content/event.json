@@ -1,0 +1,20 @@
+{
+  "name": "DevFest Kochi '26",
+  "host": "GDG Cochin",
+  "theme": "Build, Secure, Scale: developers and builders in the agentic era.",
+  "dateLabel": "Sunday, 6 December 2026",
+  "timeLabel": "9:30 AM to 5:00 PM",
+  "shortLabel": "Sun 6 Dec · 9:30 AM · Infopark",
+  "place": "Infopark, Kochi",
+  "venue": "Jain University Kochi",
+  "venueArea": "Infopark Campus, Kakkanad, Kochi 682042",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Jain+University+Kochi+Infopark+Campus",
+  "ticketsUrl": "https://konfhub.com/devfest-kochi-26",
+  "communityUrl": "https://gdg.community.dev/gdg-cochin/",
+  "email": "gdgcochin@gmail.com",
+  "seats": 300,
+  "aboutTitle": "The world's largest community-driven tech conference, in Kochi.",
+  "about": "DevFest events are independently run by local Google Developer Groups and designed for developers and AI builders everywhere, packed with the latest Google technologies, industry trends, hands-on workshops and networking. DevFest Kochi is GDG Cochin's edition: an all-day developer conference of talks, sessions and workshops at Infopark, Kochi.",
+  "start": "2026-12-06T09:30",
+  "end": "2026-12-06T17:00"
+}

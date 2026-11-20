@@ -1,0 +1,263 @@
+{
+  "intro": "The '26 lineup is being finalised. Want to be on it?",
+  "editions": [
+    {
+      "year": "2026",
+      "title": "Meet the 2026 speakers",
+      "comingSoon": true,
+      "list": []
+    },
+    {
+      "year": "2025",
+      "title": "Who took the stage in 2025",
+      "comingSoon": false,
+      "list": [
+        {
+          "name": "Merin K Jacob",
+          "role": "Technical Account Manager",
+          "org": "Google",
+          "talk": "Artificially intelligent? No, creative with Google AI Studio",
+          "track": "ai"
+        },
+        {
+          "name": "Eric Hole",
+          "role": "Vice President",
+          "org": "Onix",
+          "talk": "Don't call me a developer: designing an AI-accelerated career",
+          "track": "ai"
+        },
+        {
+          "name": "Geeta Kakrani",
+          "role": "Google Developer Expert, AI",
+          "org": "GDE",
+          "talk": "Building scalable and ethical AI solutions with Gemma",
+          "track": "ai"
+        },
+        {
+          "name": "Nishi Ajmera",
+          "role": "Solutions Architect, GDE in AI",
+          "org": "Publicis Sapient",
+          "talk": "Building conversational agents using ADK, A2A and MCP",
+          "track": "ai"
+        },
+        {
+          "name": "Nikhilesh Tayal",
+          "role": "Google Developer Expert, AI",
+          "org": "GDE",
+          "talk": "Production-ready AI agents with security, evaluation and memory",
+          "track": "ai"
+        },
+        {
+          "name": "Vishnu K S",
+          "role": "Senior Cloud Engineer",
+          "org": "DP World",
+          "talk": "Ship it fast: AI apps with Gemini, Firebase Studio and $0 infra",
+          "track": "cloud"
+        },
+        {
+          "name": "Dharmesh Vaya",
+          "role": "Senior Solutions Engineer",
+          "org": "Wiz",
+          "talk": "Securing your LLMs",
+          "track": "cloud"
+        },
+        {
+          "name": "Harisuthan S",
+          "role": "Senior Security Engineer",
+          "org": "Renault Nissan Technology",
+          "talk": "Securing Google Cloud: AI-driven threat hunting using Gemini",
+          "track": "cloud"
+        },
+        {
+          "name": "Ebin Babu",
+          "role": "CNCF Ambassador",
+          "org": "Linux Foundation projects",
+          "talk": "How to deploy a secure MCP server on Cloud Run",
+          "track": "cloud"
+        },
+        {
+          "name": "Saurabh Mahawar",
+          "role": "Developer Relations Engineer",
+          "org": "IBM",
+          "talk": "Run SQL everywhere: Presto meets BigQuery and Cloud Storage",
+          "track": "cloud"
+        },
+        {
+          "name": "Jeevitha",
+          "role": "Staff Software Engineer",
+          "org": "Juniper Networks",
+          "talk": "Orchestrating the modern data stack with Apache Airflow",
+          "track": "cloud"
+        },
+        {
+      "name": "Adarsh K Kumar",
+      "role": "",
+          "org": "Rapido",
+          "talk": "Running Go applications in Kubernetes",
+          "track": "cloud"
+        }
+      ]
+    },
+    {
+      "year": "2024",
+      "title": "Who took the stage in 2024",
+      "comingSoon": false,
+      "list": [
+        {
+          "name": "John Mathew",
+          "role": "CEO",
+          "org": "Riafy",
+          "talk": "Taking LLMs to production",
+          "track": "ai"
+        },
+        {
+          "name": "Jai Campbell",
+          "role": "Lead Cloud & Security Engineer, Google Cloud GDE",
+          "org": "Jellyfish",
+          "talk": "Serving Gemma on GKE",
+          "track": "cloud"
+        },
+        {
+          "name": "Aryan Irani",
+          "role": "Google Developer Expert, Google Workspace",
+          "org": "",
+          "talk": "Building agents with Vertex AI Agent Builder",
+          "track": "ai"
+        },
+        {
+          "name": "Aditya Shinde",
+          "role": "Android Developer",
+          "org": "",
+          "talk": "Kotlin Multiplatform",
+          "track": "mobile"
+        },
+        {
+          "name": "Prashant Dalai",
+          "role": "SDE 2",
+          "org": "Direction Software LLP",
+          "talk": "Vertex AI in Flutter apps",
+          "track": "mobile"
+        },
+        {
+          "name": "Jilu Joseph",
+          "role": "CEO",
+          "org": "Webandcrafts",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Rahul Ramesh",
+          "role": "CTO",
+          "org": "Entri.app",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Don Kora Jacob",
+          "role": "CEO",
+          "org": "Tatos.tech",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Namrata More",
+          "role": "Product Manager, OneCard",
+          "org": "GDE for Payments, Women Techmakers Ambassador",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Satish Chandra Gupta",
+          "role": "Data/AI Practitioner",
+          "org": "Hyperion Labs",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Guneet Mutreja",
+          "role": "Doctoral Researcher",
+          "org": "German Aerospace Center",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Ashish Kumar Verma",
+          "role": "Research Engineer",
+          "org": "AbundantAI",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Srushti Raybhoge",
+          "role": "Software Engineer 2",
+          "org": "Addepar",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Chandnika Ravichandran",
+          "role": "Member of Technical Staff III",
+          "org": "Verizon India",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Sruthy S Nair",
+          "role": "Associate I, Cloud IS",
+          "org": "UST",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Mounica Narkedamilli",
+          "role": "System Engineer",
+          "org": "TCS",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Amey Nerkar",
+          "role": "Technical Product Manager",
+          "org": "Bajaj Finserv Health",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Abhishek Sanjay Manuskar",
+          "role": "Creator & Lead",
+          "org": "SWOC",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Kartikey Rawat",
+          "role": "",
+          "org": "",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Arun Teja Godavarthi",
+          "role": "Community Manager, Global Developer Programs",
+          "org": "Google",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Srishti Tibrewal",
+          "role": "Community Manager",
+          "org": "Google",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Rajat Bhatia",
+          "role": "Community Manager",
+          "org": "Google",
+          "talk": "",
+          "track": ""
+        }
+      ]
+    }
+  ]
+}

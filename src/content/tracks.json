@@ -1,0 +1,46 @@
+[
+  {
+    "id": "ai",
+    "name": "AI",
+    "blurb": "Gemini, Google AI Studio and agents that hold up in production.",
+    "topics": [
+      "Gemini API",
+      "Agent Development Kit",
+      "Gemma",
+      "Evals"
+    ]
+  },
+  {
+    "id": "mobile",
+    "name": "Mobile",
+    "blurb": "Android and Flutter apps that feel native everywhere they ship.",
+    "topics": [
+      "Flutter",
+      "Jetpack Compose",
+      "Gemini in Android",
+      "Kotlin Multiplatform"
+    ]
+  },
+  {
+    "id": "cloud",
+    "name": "Cloud",
+    "blurb": "Secure, scalable infrastructure on Google Cloud and Firebase.",
+    "topics": [
+      "Cloud Run",
+      "Firebase",
+      "BigQuery",
+      "Security"
+    ]
+  },
+  {
+    "id": "web",
+    "name": "Web",
+    "blurb": "Fast, accessible web apps with the newest platform features.",
+    "topics": [
+      "Chrome built-in AI",
+      "Angular",
+      "Web performance",
+      "PWAs"
+    ]
+  }
+]

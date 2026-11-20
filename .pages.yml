@@ -1,0 +1,163 @@
+media:
+  - name: speakers
+    label: Speaker photos
+    input: public/speakers
+    output: /speakers
+    rename: safe
+    categories: [image]
+  - name: memories
+    label: Past DevFest photos
+    input: public/memories
+    output: /memories
+    rename: safe
+    categories: [image]
+
+components:
+  track:
+    type: select
+    options:
+      values:
+        - { name: ai, label: AI }
+        - { name: mobile, label: Mobile }
+        - { name: cloud, label: Cloud }
+        - { name: web, label: Web }
+  kochiTime:
+    type: date
+    description: Kochi time (IST)
+    options:
+      time: true
+      format: yyyy-MM-dd'T'HH:mm
+  clock:
+    type: string
+    description: 24-hour time, e.g. 13:30
+    pattern:
+      regex: "^([01]\\d|2[0-3]):[0-5]\\d$"
+      message: Use 24-hour HH:MM, e.g. 09:30 or 13:30
+
+content:
+  - name: event
+    label: Event details
+    type: file
+    path: src/content/event.json
+    format: json
+    fields:
+      - { name: name, label: Event name, type: string, required: true }
+      - { name: host, label: Organised by, type: string }
+      - { name: theme, type: text }
+      - { name: start, label: Starts, component: kochiTime, required: true }
+      - { name: end, label: Ends, component: kochiTime, required: true }
+      - { name: dateLabel, label: Date as written, type: string, description: "e.g. Sunday, 6 December 2026" }
+      - { name: timeLabel, label: Time as written, type: string, description: "e.g. 9:30 AM to 5:00 PM" }
+      - { name: shortLabel, label: Short date line (mobile hero), type: string, description: "Keep it short, e.g. Sun 6 Dec · 9:30 AM · Infopark" }
+      - { name: place, label: Place (headline), type: string, description: "The name people search for, e.g. Infopark, Kochi" }
+      - { name: venue, label: Venue building, type: string }
+      - { name: venueArea, label: Venue address, type: string }
+      - { name: mapsUrl, label: Google Maps link, type: string }
+      - { name: ticketsUrl, label: Tickets link, type: string }
+      - { name: communityUrl, label: Community page link, type: string }
+      - { name: email, label: Contact email, type: string }
+      - { name: aboutTitle, label: About heading, type: string }
+      - { name: about, label: About text, type: text }
+      - { name: seats, type: number }
+
+  - name: speakers
+    label: Speakers
+    type: file
+    path: src/content/speakers.json
+    format: json
+    fields:
+      - { name: intro, type: text, description: "Shown under the heading. A \"Pitch us a talk\" link is added after this text." }
+      - name: editions
+        label: Years
+        description: "Each year becomes a filter button, in this order. The page opens on the first year that has speakers. Years with no speakers only show if Coming soon is on."
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{year}: {title}"
+        fields:
+          - { name: year, type: string, required: true }
+          - { name: title, label: Heading, type: string, required: true, description: "e.g. Who took the stage in 2025" }
+          - { name: comingSoon, label: Coming soon, type: boolean, description: Shows a Coming soon badge and placeholder cards until speakers are added. }
+          - name: list
+            label: Speakers
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name} ({org})"
+            fields:
+              - { name: name, type: string, required: true }
+              - { name: role, type: string }
+              - { name: org, label: Company or community, type: string }
+              - { name: talk, label: Talk title, type: string }
+              - { name: track, component: track, description: Leave empty if the talk isn't known yet. }
+              - { name: photo, type: image, options: { media: speakers }, description: Square photo works best. Leave empty to show initials. }
+
+  - name: agenda
+    label: Agenda
+    type: file
+    path: src/content/agenda.json
+    format: json
+    list: true
+    fields:
+      - { name: start, component: clock, required: true }
+      - { name: end, component: clock, required: true }
+      - { name: title, type: string, required: true }
+      - name: kind
+        type: select
+        required: true
+        options:
+          values:
+            - { name: keynote, label: Keynote }
+            - { name: talk, label: Talk }
+            - { name: workshop, label: Workshop }
+            - { name: break, label: Break }
+            - { name: community, label: Community }
+      - { name: track, component: track, description: Leave empty for sessions everyone attends. }
+      - { name: room, type: string }
+
+  - name: tracks
+    label: Tracks
+    type: file
+    path: src/content/tracks.json
+    format: json
+    list: true
+    fields:
+      - { name: id, type: string, readonly: true, description: Fixed. Colours and icons are tied to it. }
+      - { name: name, type: string, required: true }
+      - { name: blurb, type: text }
+      - { name: topics, type: string, list: true }
+
+  - name: road
+    label: Timeline (past DevFests)
+    type: file
+    path: src/content/road.json
+    format: json
+    list: true
+    fields:
+      - { name: date, type: string, description: "As written, e.g. 1 Nov 2025" }
+      - { name: title, type: string, required: true }
+      - { name: detail, type: string }
+      - { name: photo, type: image, options: { media: memories }, description: "Pops up as a faded memory on hover. Landscape, about 960×600. Leave empty for the upcoming edition." }
+      - { name: caption, type: string, description: "Written under the photo, keep it under ~25 characters, e.g. On the XIME lawn, 2024. Falls back to the title." }
+
+  - name: film
+    label: Film roll photos
+    type: file
+    path: src/content/film.json
+    format: json
+    list: true
+    fields:
+      - { name: photo, type: image, required: true, options: { media: memories } }
+      - { name: caption, type: string, description: "Short, e.g. DevFest Kochi 2024" }
+
+  - name: faqs
+    label: FAQ
+    type: file
+    path: src/content/faqs.json
+    format: json
+    list: true
+    fields:
+      - { name: q, label: Question, type: string, required: true }
+      - { name: a, label: Answer, type: text, required: true }

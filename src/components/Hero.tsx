@@ -91,7 +91,7 @@ export default function Hero() {
           <time dateTime={event.start}>
             <span className="sm:hidden"><DateText text={event.shortLabel} /></span>
             <span className="max-sm:hidden">
-              <DateText text={event.dateLabel} /> · {event.timeLabel} · {event.place}
+              <DateText text={event.dateLabel} /> · {event.timeLabel} · {event.heroPlace}
             </span>
           </time>
         </motion.p>
@@ -136,7 +136,7 @@ function Countdown() {
   if (now !== null && now >= start) {
     return (
       <p className="mt-8 font-mono text-lg sm:mt-[clamp(1rem,5svh,3rem)]" role="status">
-        {now < end ? `We're live at ${event.place} right now.` : "That's a wrap. See you at DevFest 2027."}
+        {now < end ? `We're live at ${event.heroPlace} right now.` : "That's a wrap. See you at DevFest 2027."}
       </p>
     );
   }

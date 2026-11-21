@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Short, wide screens (laptops with browser chrome): used to compact the hero. */
+@custom-variant short {
+  @media (max-height: 680px) {
+    @slot;
+  }
+}
+
 @theme {
   --color-blue: #4285f4;
   --color-green: #34a853;

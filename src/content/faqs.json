@@ -1,33 +1,5 @@
 [
   {
-    "q": "What is DevFest Kochi?",
-    "a": "DevFest is the community-run developer conference that Google Developer Groups host around the world each year. DevFest Kochi is GDG Cochin's edition: a full day of talks, hands-on workshops and conversations about building with Google technologies."
-  },
-  {
-    "q": "When and where is it?",
-    "a": "Sunday, 6 December 2026, from 9:30 AM to 5:00 PM at Jain University Kochi, Infopark Campus, Kakkanad. Directions are in the Venue section above."
-  },
-  {
-    "q": "Who is it for?",
-    "a": "Anyone who builds or wants to. Sessions range from first steps to deep dives, and students, designers, founders and curious builders are all welcome. You don't need to be an experienced developer."
-  },
-  {
-    "q": "When will the speakers and agenda be announced?",
-    "a": "Soon. We're finalising the 2026 lineup now, and tracks, the agenda and speakers will go up on this page as they're confirmed. Passes are already on sale, so you don't have to wait to get yours."
-  },
-  {
-    "q": "How do I get a pass?",
-    "a": "Passes are sold on KonfHub at https://konfhub.com/devfest-kochi-26. There are 300 seats and they're released in tiers, so once a tier closes its price is gone. Earlier editions sold out."
-  },
-  {
-    "q": "What does the pass include?",
-    "a": "Full-day access to the keynotes, talks and workshops, the community lounge and sponsor booths, DevFest swag, and food and refreshments through the day. The student pass also includes a certificate of participation."
-  },
-  {
-    "q": "What should I bring?",
-    "a": "Your ticket confirmation from KonfHub, and a laptop with a charger if you want to join a workshop. Workshop setup instructions will be shared once the agenda is out."
-  },
-  {
     "q": "Can I speak, sponsor or volunteer?",
     "a": "Yes. Write to hello@gdgcochin.org and tell us what you have in mind."
   },
@@ -36,11 +8,7 @@
     "a": "Yes. DevFest Kochi follows the Google Developer Groups community guidelines. Everyone attending, speaking, sponsoring or volunteering agrees to keep it a harassment-free space."
   },
   {
-    "q": "I have another question.",
+    "q": "Have another question?",
     "a": "Email us at hello@gdgcochin.org and someone from the GDG Cochin team will get back to you."
-  },
-  {
-    "q": "Is anything hidden on this site?",
-    "a": "Maybe. Four coupons, one checkout each, first come first served. The years line up by date, not by number. The hosts would like a badge of their own. Get lost and you might catch a ferry. And the fishing net at the venue is always hungry."
   }
 ]

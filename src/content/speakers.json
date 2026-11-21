@@ -17,84 +17,104 @@
           "role": "Technical Account Manager",
           "org": "Google",
           "talk": "Artificially intelligent? No, creative with Google AI Studio",
-          "track": "ai"
+          "track": "ai",
+          "photo": "/speakers/merin-k-jacob.jpg"
         },
         {
           "name": "Eric Hole",
           "role": "Vice President",
           "org": "Onix",
           "talk": "Don't call me a developer: designing an AI-accelerated career",
-          "track": "ai"
+          "track": "ai",
+          "photo": "/speakers/eric-hole.jpg"
         },
         {
           "name": "Geeta Kakrani",
           "role": "Google Developer Expert, AI",
           "org": "GDE",
           "talk": "Building scalable and ethical AI solutions with Gemma",
-          "track": "ai"
+          "track": "ai",
+          "photo": "/speakers/geeta-kakrani.jpg"
         },
         {
           "name": "Nishi Ajmera",
           "role": "Solutions Architect, GDE in AI",
           "org": "Publicis Sapient",
           "talk": "Building conversational agents using ADK, A2A and MCP",
-          "track": "ai"
+          "track": "ai",
+          "photo": "/speakers/nishi-ajmera.jpg"
         },
         {
           "name": "Nikhilesh Tayal",
           "role": "Google Developer Expert, AI",
           "org": "GDE",
           "talk": "Production-ready AI agents with security, evaluation and memory",
-          "track": "ai"
+          "track": "ai",
+          "photo": "/speakers/nikhilesh-tayal.jpg"
         },
         {
           "name": "Vishnu K S",
           "role": "Senior Cloud Engineer",
           "org": "DP World",
           "talk": "Ship it fast: AI apps with Gemini, Firebase Studio and $0 infra",
-          "track": "cloud"
+          "track": "cloud",
+          "photo": "/speakers/vishnu-k-s.jpg"
         },
         {
           "name": "Dharmesh Vaya",
           "role": "Senior Solutions Engineer",
           "org": "Wiz",
           "talk": "Securing your LLMs",
-          "track": "cloud"
+          "track": "cloud",
+          "photo": "/speakers/dharmesh-vaya.jpg"
         },
         {
           "name": "Harisuthan S",
           "role": "Senior Security Engineer",
           "org": "Renault Nissan Technology",
           "talk": "Securing Google Cloud: AI-driven threat hunting using Gemini",
-          "track": "cloud"
+          "track": "cloud",
+          "photo": "/speakers/harisuthan-s.jpg"
         },
         {
           "name": "Ebin Babu",
           "role": "CNCF Ambassador",
           "org": "Linux Foundation projects",
           "talk": "How to deploy a secure MCP server on Cloud Run",
-          "track": "cloud"
+          "track": "cloud",
+          "photo": "/speakers/ebin-babu.jpg"
         },
         {
           "name": "Saurabh Mahawar",
           "role": "Developer Relations Engineer",
           "org": "IBM",
           "talk": "Run SQL everywhere: Presto meets BigQuery and Cloud Storage",
-          "track": "cloud"
+          "track": "cloud",
+          "photo": "/speakers/saurabh-mahawar.jpg"
         },
         {
-          "name": "Jeevitha",
+          "name": "Jeevitha K",
           "role": "Staff Software Engineer",
           "org": "Juniper Networks",
           "talk": "Orchestrating the modern data stack with Apache Airflow",
-          "track": "cloud"
+          "track": "cloud",
+          "photo": "/speakers/jeevitha-k.jpg"
         },
         {
-      "name": "Adarsh K Kumar",
-      "role": "",
+          "name": "Adarsh K Kumar",
+          "role": "",
           "org": "Rapido",
           "talk": "Running Go applications in Kubernetes",
-          "track": "cloud"
+          "track": "cloud",
+          "photo": "/speakers/adarsh-k-kumar.jpg"
+        },
+        {
+          "name": "Imran Roshan",
+          "role": "FDE",
+          "org": "Accuknox",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/imran-roshan.jpg"
         }
       ]
     },
@@ -108,154 +128,317 @@
           "role": "CEO",
           "org": "Riafy",
           "talk": "Taking LLMs to production",
-          "track": "ai"
+          "track": "ai",
+          "photo": "/speakers/john-mathew.jpg"
         },
         {
           "name": "Jai Campbell",
           "role": "Lead Cloud & Security Engineer, Google Cloud GDE",
           "org": "Jellyfish",
           "talk": "Serving Gemma on GKE",
-          "track": "cloud"
+          "track": "cloud",
+          "photo": "/speakers/jai-campbell.jpg"
         },
         {
           "name": "Aryan Irani",
           "role": "Google Developer Expert, Google Workspace",
           "org": "",
           "talk": "Building agents with Vertex AI Agent Builder",
-          "track": "ai"
+          "track": "ai",
+          "photo": "/speakers/aryan-irani.jpg"
         },
         {
           "name": "Aditya Shinde",
           "role": "Android Developer",
           "org": "",
           "talk": "Kotlin Multiplatform",
-          "track": "mobile"
+          "track": "mobile",
+          "photo": "/speakers/aditya-shinde.jpg"
         },
         {
           "name": "Prashant Dalai",
           "role": "SDE 2",
           "org": "Direction Software LLP",
           "talk": "Vertex AI in Flutter apps",
-          "track": "mobile"
+          "track": "mobile",
+          "photo": "/speakers/prashant-dalai.jpg"
         },
         {
           "name": "Jilu Joseph",
           "role": "CEO",
           "org": "Webandcrafts",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/jilu-joseph.jpg"
         },
         {
           "name": "Rahul Ramesh",
           "role": "CTO",
           "org": "Entri.app",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/rahul-ramesh.jpg"
         },
         {
           "name": "Don Kora Jacob",
           "role": "CEO",
           "org": "Tatos.tech",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/don-kora-jacob.jpg"
         },
         {
           "name": "Namrata More",
           "role": "Product Manager, OneCard",
           "org": "GDE for Payments, Women Techmakers Ambassador",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/namrata-more.jpg"
         },
         {
           "name": "Satish Chandra Gupta",
           "role": "Data/AI Practitioner",
           "org": "Hyperion Labs",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/satish-chandra-gupta.jpg"
         },
         {
           "name": "Guneet Mutreja",
           "role": "Doctoral Researcher",
           "org": "German Aerospace Center",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/guneet-mutreja.jpg"
         },
         {
           "name": "Ashish Kumar Verma",
           "role": "Research Engineer",
           "org": "AbundantAI",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/ashish-kumar-verma.jpg"
         },
         {
           "name": "Srushti Raybhoge",
           "role": "Software Engineer 2",
           "org": "Addepar",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/srushti-raybhoge.jpg"
         },
         {
           "name": "Chandnika Ravichandran",
           "role": "Member of Technical Staff III",
           "org": "Verizon India",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/chandnika-ravichandran.jpg"
         },
         {
           "name": "Sruthy S Nair",
           "role": "Associate I, Cloud IS",
           "org": "UST",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/sruthy-s-nair.jpg"
         },
         {
           "name": "Mounica Narkedamilli",
           "role": "System Engineer",
           "org": "TCS",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/mounica-narkedamilli.jpg"
         },
         {
           "name": "Amey Nerkar",
           "role": "Technical Product Manager",
           "org": "Bajaj Finserv Health",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/amey-nerkar.jpg"
         },
         {
           "name": "Abhishek Sanjay Manuskar",
           "role": "Creator & Lead",
           "org": "SWOC",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/abhishek-sanjay-manuskar.jpg"
         },
         {
           "name": "Kartikey Rawat",
           "role": "",
           "org": "",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/kartikey-rawat.jpg"
         },
         {
           "name": "Arun Teja Godavarthi",
           "role": "Community Manager, Global Developer Programs",
           "org": "Google",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/arun-teja-godavarthi.jpg"
         },
         {
           "name": "Srishti Tibrewal",
           "role": "Community Manager",
           "org": "Google",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/srishti-tibrewal.jpg"
         },
         {
           "name": "Rajat Bhatia",
           "role": "Community Manager",
           "org": "Google",
           "talk": "",
-          "track": ""
+          "track": "",
+          "photo": "/speakers/rajat-bhatia.jpg"
+        }
+      ]
+    },
+    {
+      "year": "2023",
+      "title": "Who took the stage in 2023",
+      "list": [
+        {
+          "name": "L Venkata Subramaniam",
+          "role": "Quantum India Leader",
+          "org": "IBM",
+          "talk": "Keynote",
+          "track": "",
+          "photo": "/speakers/l-venkata-subramaniam.jpg"
+        },
+        {
+          "name": "Sujata Madhav Chandran",
+          "role": "Head - Strategic Initiatives",
+          "org": "TCS",
+          "talk": "Keynote",
+          "track": "",
+          "photo": "/speakers/sujata-madhav-chandran.jpg"
+        },
+        {
+          "name": "Saurabh Rajpal",
+          "role": "Technical Solutions Consultant",
+          "org": "Google",
+          "talk": "Flagship session",
+          "track": "web",
+          "photo": "/speakers/saurabh-rajpal.jpg"
+        },
+        {
+          "name": "Ishan Khanna",
+          "role": "Senior Software Engineer",
+          "org": "Tinder",
+          "talk": "Plugging the drain: strategies for fixing memory leaks in your Android apps",
+          "track": "mobile",
+          "photo": "/speakers/ishan-khanna.jpg"
+        },
+        {
+          "name": "Srishti Tibrewal",
+          "role": "Community Manager",
+          "org": "Google",
+          "talk": "Google for Startups offerings",
+          "track": "",
+          "photo": "/speakers/srishti-tibrewal.jpg"
+        },
+        {
+          "name": "Divya Mohan",
+          "role": "Senior Technical Evangelist",
+          "org": "SUSE",
+          "talk": "The green cloud(ish) triangle",
+          "track": "cloud",
+          "photo": "/speakers/divya-mohan.jpg"
+        },
+        {
+          "name": "Niran Vijayakumar",
+          "role": "Multi Cloud Architect",
+          "org": "",
+          "talk": "Unlocking developer productivity with serverless on Google Cloud",
+          "track": "cloud"
+        },
+        {
+          "name": "Bodhish Thomas",
+          "role": "Senior Full Stack Developer",
+          "org": "Pupilfirst",
+          "talk": "Digital public good in action: the journey of Open Healthcare Network",
+          "track": "web",
+          "photo": "/speakers/bodhish-thomas.jpg"
+        },
+        {
+          "name": "Shidhin CR",
+          "role": "Google Developer Expert",
+          "org": "",
+          "talk": "Debugging modern web applications",
+          "track": "web",
+          "photo": "/speakers/shidhin-cr.jpg"
+        },
+        {
+          "name": "Anju Dinesh",
+          "role": "Senior Human Resources Consultant",
+          "org": "impress.ai",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/anju-dinesh.jpg"
+        },
+        {
+          "name": "Ananya R",
+          "role": "Ex-Community Manager",
+          "org": "She Loves Tech",
+          "talk": "Equity in tech and startups",
+          "track": "",
+          "photo": "/speakers/ananya-r.jpg"
+        },
+        {
+          "name": "Vandana Pv",
+          "role": "Conversational AI Lead",
+          "org": "",
+          "talk": "Talking to the future: discovering conversational AI's secrets",
+          "track": "ai",
+          "photo": "/speakers/vandana-pv.jpg"
+        },
+        {
+          "name": "Shivangi C",
+          "role": "Senior UX Designer",
+          "org": "Autodesk",
+          "talk": "Designing experiences",
+          "track": "",
+          "photo": "/speakers/shivangi-c.jpg"
+        },
+        {
+          "name": "Raul John Aju",
+          "role": "YouTuber",
+          "org": "",
+          "talk": "Rockstar speaker session",
+          "track": "",
+          "photo": "/speakers/raul-john-aju.jpg"
+        },
+        {
+          "name": "Kiran S Raj",
+          "role": "Lead Data Scientist",
+          "org": "Qualys",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/kiran-s-raj.jpg"
+        },
+        {
+          "name": "Don Kora Jacob",
+          "role": "CEO",
+          "org": "Tatos.tech",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/don-kora-jacob.jpg"
+        },
+        {
+          "name": "Mikhel V Kuttickal",
+          "role": "Flutter Developer",
+          "org": "Tatos.tech",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/mikhel-v-kuttickal.jpg"
         }
       ]
     }

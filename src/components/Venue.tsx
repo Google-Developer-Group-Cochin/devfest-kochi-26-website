@@ -1,4 +1,5 @@
 import { event } from "@/content/site";
+import DateText from "./DateText";
 import NetEgg from "./NetEgg";
 import { TabCard } from "./shapes";
 
@@ -23,7 +24,7 @@ export default function Venue() {
             </p>
             <dl className="mt-6 grid grid-cols-[auto_1fr] gap-x-5 gap-y-1.5 font-mono text-sm">
               <dt className="text-ink-soft">date</dt>
-              <dd>{event.dateLabel}</dd>
+              <dd><DateText text={event.dateLabel} /></dd>
               <dt className="text-ink-soft">time</dt>
               <dd>{event.timeLabel}</dd>
             </dl>

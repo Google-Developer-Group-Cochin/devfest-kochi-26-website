@@ -1,13 +1,13 @@
-import Agenda from "@/components/Agenda";
 import BadgeMaker from "@/components/BadgeMaker";
+import ComingSoon from "@/components/ComingSoon";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
 import { Skyline } from "@/components/Kochi";
 import Nav from "@/components/Nav";
+import Organizers from "@/components/Organizers";
 import Speakers from "@/components/Speakers";
-import Tracks from "@/components/Tracks";
 import Venue from "@/components/Venue";
 import { event, seoDescription, siteUrl } from "@/content/site";
 
@@ -46,9 +46,9 @@ export default function Home() {
       <main id="main">
         <Hero />
         <Intro />
-        <Tracks />
-        <Agenda />
+        <ComingSoon />
         <Speakers />
+        <Organizers />
         <BadgeMaker />
         <Venue />
         <Faq />

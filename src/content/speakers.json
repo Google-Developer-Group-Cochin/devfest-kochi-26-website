@@ -309,7 +309,7 @@
           "name": "L Venkata Subramaniam",
           "role": "Quantum India Leader",
           "org": "IBM",
-          "talk": "",
+          "talk": "Keynote",
           "track": "",
           "photo": "/speakers/l-venkata-subramaniam.jpg"
         },
@@ -317,7 +317,7 @@
           "name": "Sujata Madhav Chandran",
           "role": "Head - Strategic Initiatives",
           "org": "TCS",
-          "talk": "",
+          "talk": "Keynote",
           "track": "",
           "photo": "/speakers/sujata-madhav-chandran.jpg"
         },
@@ -325,23 +325,23 @@
           "name": "Saurabh Rajpal",
           "role": "Technical Solutions Consultant",
           "org": "Google",
-          "talk": "",
-          "track": "",
+          "talk": "Flagship session",
+          "track": "web",
           "photo": "/speakers/saurabh-rajpal.jpg"
         },
         {
           "name": "Ishan Khanna",
           "role": "Senior Software Engineer",
           "org": "Tinder",
-          "talk": "",
-          "track": "",
+          "talk": "Plugging the drain: strategies for fixing memory leaks in your Android apps",
+          "track": "mobile",
           "photo": "/speakers/ishan-khanna.jpg"
         },
         {
           "name": "Srishti Tibrewal",
           "role": "Community Manager",
           "org": "Google",
-          "talk": "",
+          "talk": "Google for Startups offerings",
           "track": "",
           "photo": "/speakers/srishti-tibrewal.jpg"
         },
@@ -349,31 +349,31 @@
           "name": "Divya Mohan",
           "role": "Senior Technical Evangelist",
           "org": "SUSE",
-          "talk": "",
-          "track": "",
+          "talk": "The green cloud(ish) triangle",
+          "track": "cloud",
           "photo": "/speakers/divya-mohan.jpg"
         },
         {
           "name": "Niran Vijayakumar",
           "role": "Multi Cloud Architect",
           "org": "",
-          "talk": "",
-          "track": ""
+          "talk": "Unlocking developer productivity with serverless on Google Cloud",
+          "track": "cloud"
         },
         {
           "name": "Bodhish Thomas",
           "role": "Senior Full Stack Developer",
           "org": "Pupilfirst",
-          "talk": "",
-          "track": "",
+          "talk": "Digital public good in action: the journey of Open Healthcare Network",
+          "track": "web",
           "photo": "/speakers/bodhish-thomas.jpg"
         },
         {
           "name": "Shidhin CR",
           "role": "Google Developer Expert",
           "org": "",
-          "talk": "",
-          "track": "",
+          "talk": "Debugging modern web applications",
+          "track": "web",
           "photo": "/speakers/shidhin-cr.jpg"
         },
         {
@@ -388,7 +388,7 @@
           "name": "Ananya R",
           "role": "Ex-Community Manager",
           "org": "She Loves Tech",
-          "talk": "",
+          "talk": "Equity in tech and startups",
           "track": "",
           "photo": "/speakers/ananya-r.jpg"
         },
@@ -396,15 +396,15 @@
           "name": "Vandana Pv",
           "role": "Conversational AI Lead",
           "org": "",
-          "talk": "",
-          "track": "",
+          "talk": "Talking to the future: discovering conversational AI's secrets",
+          "track": "ai",
           "photo": "/speakers/vandana-pv.jpg"
         },
         {
           "name": "Shivangi C",
           "role": "Senior UX Designer",
           "org": "Autodesk",
-          "talk": "",
+          "talk": "Designing experiences",
           "track": "",
           "photo": "/speakers/shivangi-c.jpg"
         },
@@ -412,7 +412,7 @@
           "name": "Raul John Aju",
           "role": "YouTuber",
           "org": "",
-          "talk": "",
+          "talk": "Rockstar speaker session",
           "track": "",
           "photo": "/speakers/raul-john-aju.jpg"
         },

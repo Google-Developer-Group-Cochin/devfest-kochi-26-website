@@ -75,7 +75,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.p
-          className="mt-6 max-w-[30ch] text-[clamp(1.05rem,min(2.2vw,3svh),1.5rem)] leading-snug text-balance sm:mt-[clamp(0.75rem,3.5svh,2rem)]"
+          className="mt-6 max-w-[30ch] text-[clamp(1.05rem,min(2.2vw,3svh),1.5rem)] leading-snug text-balance sm:max-w-none sm:whitespace-nowrap sm:mt-[clamp(0.75rem,3.5svh,2rem)]"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.85, duration: 0.5 }}

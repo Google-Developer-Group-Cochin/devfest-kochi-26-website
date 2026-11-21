@@ -142,7 +142,9 @@ export default function Speakers() {
                     {s.name}
                   </motion.span>
                   <motion.span layout="position" className="mt-1 block text-sm text-ink/70">
-                    {[s.role, s.org].filter(Boolean).join(", ")}
+                    {s.role}
+                    {s.role && s.org && ", "}
+                    {s.org && <strong className="font-bold text-ink">{s.org}</strong>}
                   </motion.span>
                   <AnimatePresence initial={false}>
                     {on && (

@@ -42,23 +42,26 @@ export default function Organizers() {
           <h2 id="team-title" className="max-w-[12ch] text-[clamp(2.4rem,5.5vw,4.25rem)] leading-[0.98] font-bold tracking-[-0.035em]">
             Meet the organizers
           </h2>
-          <Sticker id="mattancherry" className="h-20 w-auto shrink-0 sm:h-28" tilt={6} />
+          <Sticker id="mattancherry" className="h-20 w-auto shrink-0 max-sm:hidden sm:h-28" tilt={6} />
         </div>
         <p className="max-w-[40ch] text-lg text-ink/75">DevFest Kochi is run by volunteers from GDG Cochin, the Google Developer Group for Kochi.</p>
       </div>
 
       <ul className="mt-8 grid gap-5 sm:mt-12 sm:grid-cols-2">
         {organizers.map((o, i) => (
-          <li key={o.name} className="ink-border flex items-center gap-5 rounded-[22px] bg-white p-5 sm:gap-6 sm:p-6">
+          <li key={o.name} className="ink-border flex flex-col items-start gap-4 rounded-[22px] bg-white p-5 sm:flex-row sm:items-center sm:gap-6 sm:p-6">
             {o.photo ? (
-              <img src={o.photo} alt="" loading="lazy" className="ink-border size-24 shrink-0 rounded-full object-cover sm:size-28" style={{ background: tints[i % tints.length] }} />
+              <img src={o.photo} alt="" loading="lazy" className="ink-border size-20 shrink-0 rounded-full object-cover sm:size-28" style={{ background: tints[i % tints.length] }} />
             ) : (
-              <span aria-hidden className="ink-border size-24 shrink-0 rounded-full sm:size-28" style={{ background: tints[i % tints.length] }} />
+              <span aria-hidden className="ink-border size-20 shrink-0 rounded-full sm:size-28" style={{ background: tints[i % tints.length] }} />
             )}
             <div className="min-w-0">
               <span className="inline-block rounded-full bg-(--track) px-2.5 py-0.5 font-mono text-xs transition-colors duration-500">{o.role}</span>
               <h3 className="mt-2 text-xl leading-tight font-bold sm:text-2xl">{o.name}</h3>
-              <p className="mt-1 text-ink/70">{o.job}</p>
+              <p className="mt-1 text-ink/70">
+                {o.job.includes(", ") ? o.job.slice(0, o.job.lastIndexOf(", ") + 2) : ""}
+                <strong className="font-bold text-ink">{o.job.includes(", ") ? o.job.slice(o.job.lastIndexOf(", ") + 2) : o.job}</strong>
+              </p>
               <div className="mt-3 flex gap-2">
                 {o.linkedin && (
                   <Social href={o.linkedin} label={`${o.name} on LinkedIn`}>

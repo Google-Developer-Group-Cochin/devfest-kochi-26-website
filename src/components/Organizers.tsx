@@ -75,6 +75,29 @@ export default function Organizers() {
           </li>
         ))}
       </ul>
+
+      <div className="mt-12 sm:mt-16">
+        <div className="flex flex-wrap items-center gap-3">
+          <h3 className="text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold tracking-tight">The team</h3>
+          <span className="rounded-full border-[1.5px] border-ink bg-white px-2.5 py-0.5 font-mono text-xs">TBA</span>
+        </div>
+        <p className="mt-2 max-w-[55ch] text-lg text-ink/75">The volunteers who make DevFest Kochi happen will be introduced here soon.</p>
+        <ul aria-label="Team members to be announced" className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          {tints.map((tint, i) => (
+            <li
+              key={i}
+              aria-hidden
+              className={`flex aspect-[4/3] flex-col justify-end rounded-[22px] border-2 border-dashed border-ink/30 p-5 ${i > 1 ? "max-sm:hidden" : ""} ${i > 2 ? "sm:max-lg:hidden" : ""}`}
+            >
+              <span className="mb-auto grid size-14 place-items-center rounded-full border-2 border-dashed border-ink/30 text-2xl text-ink/40" style={{ background: tint }}>
+                ?
+              </span>
+              <span className="h-3 w-3/4 rounded-full bg-ink/10" />
+              <span className="mt-2 h-3 w-1/2 rounded-full bg-ink/10" />
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }

@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
 import { Skyline } from "@/components/Kochi";
 import Nav from "@/components/Nav";
+import Organizers from "@/components/Organizers";
 import Speakers from "@/components/Speakers";
 import Venue from "@/components/Venue";
 import { event, seoDescription, siteUrl } from "@/content/site";
@@ -47,6 +48,7 @@ export default function Home() {
         <Intro />
         <ComingSoon />
         <Speakers />
+        <Organizers />
         <BadgeMaker />
         <Venue />
         <Faq />

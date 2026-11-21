@@ -10,6 +10,7 @@ import { GdgLogo } from "./shapes";
 const links = [
   { href: "#lineup", label: "Lineup" },
   { href: "#speakers", label: "Speakers" },
+  { href: "#team", label: "Team" },
   { href: "#badge", label: "Badge" },
   { href: "#venue", label: "Venue" },
   { href: "#faq", label: "FAQ" },

@@ -7,8 +7,7 @@ import { event } from "@/content/site";
 import { GdgLogo } from "./shapes";
 
 const links = [
-  { href: "#tracks", label: "Tracks" },
-  { href: "#agenda", label: "Agenda" },
+  { href: "#lineup", label: "Lineup" },
   { href: "#speakers", label: "Speakers" },
   { href: "#badge", label: "Badge" },
   { href: "#venue", label: "Venue" },

@@ -300,6 +300,147 @@
           "photo": "/speakers/rajat-bhatia.jpg"
         }
       ]
+    },
+    {
+      "year": "2023",
+      "title": "Who took the stage in 2023",
+      "list": [
+        {
+          "name": "L Venkata Subramaniam",
+          "role": "Quantum India Leader",
+          "org": "IBM",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/l-venkata-subramaniam.jpg"
+        },
+        {
+          "name": "Sujata Madhav Chandran",
+          "role": "Head - Strategic Initiatives",
+          "org": "TCS",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/sujata-madhav-chandran.jpg"
+        },
+        {
+          "name": "Saurabh Rajpal",
+          "role": "Technical Solutions Consultant",
+          "org": "Google",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/saurabh-rajpal.jpg"
+        },
+        {
+          "name": "Ishan Khanna",
+          "role": "Senior Software Engineer",
+          "org": "Tinder",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/ishan-khanna.jpg"
+        },
+        {
+          "name": "Srishti Tibrewal",
+          "role": "Community Manager",
+          "org": "Google",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/srishti-tibrewal.jpg"
+        },
+        {
+          "name": "Divya Mohan",
+          "role": "Senior Technical Evangelist",
+          "org": "SUSE",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/divya-mohan.jpg"
+        },
+        {
+          "name": "Niran Vijayakumar",
+          "role": "Multi Cloud Architect",
+          "org": "",
+          "talk": "",
+          "track": ""
+        },
+        {
+          "name": "Bodhish Thomas",
+          "role": "Senior Full Stack Developer",
+          "org": "Pupilfirst",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/bodhish-thomas.jpg"
+        },
+        {
+          "name": "Shidhin CR",
+          "role": "Google Developer Expert",
+          "org": "",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/shidhin-cr.jpg"
+        },
+        {
+          "name": "Anju Dinesh",
+          "role": "Senior Human Resources Consultant",
+          "org": "impress.ai",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/anju-dinesh.jpg"
+        },
+        {
+          "name": "Ananya R",
+          "role": "Ex-Community Manager",
+          "org": "She Loves Tech",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/ananya-r.jpg"
+        },
+        {
+          "name": "Vandana Pv",
+          "role": "Conversational AI Lead",
+          "org": "",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/vandana-pv.jpg"
+        },
+        {
+          "name": "Shivangi C",
+          "role": "Senior UX Designer",
+          "org": "Autodesk",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/shivangi-c.jpg"
+        },
+        {
+          "name": "Raul John Aju",
+          "role": "YouTuber",
+          "org": "",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/raul-john-aju.jpg"
+        },
+        {
+          "name": "Kiran S Raj",
+          "role": "Lead Data Scientist",
+          "org": "Qualys",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/kiran-s-raj.jpg"
+        },
+        {
+          "name": "Don Kora Jacob",
+          "role": "CEO",
+          "org": "Tatos.tech",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/don-kora-jacob.jpg"
+        },
+        {
+          "name": "Mikhel V Kuttickal",
+          "role": "Flutter Developer",
+          "org": "Tatos.tech",
+          "talk": "",
+          "track": "",
+          "photo": "/speakers/mikhel-v-kuttickal.jpg"
+        }
+      ]
     }
   ]
 }

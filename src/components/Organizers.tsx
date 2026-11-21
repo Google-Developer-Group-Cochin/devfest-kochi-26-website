@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import organizersJson from "@/content/organizers.json";
 import { Sticker } from "./Kochi";
 
-type Organizer = { name: string; role: string; job: string; photo?: string; linkedin?: string; x?: string; gdg?: string };
+type Organizer = { name: string; role: string; job: string; photo?: string; linkedin?: string; x?: string };
 
 const organizers = organizersJson as Organizer[];
 
@@ -68,11 +68,6 @@ export default function Organizers() {
                 {o.x && (
                   <Social href={o.x} label={`${o.name} on X`}>
                     <XLogo />
-                  </Social>
-                )}
-                {o.gdg && (
-                  <Social href={o.gdg} label={`${o.name} on GDG Community`}>
-                    <span className="font-mono text-[11px] font-bold">GDG</span>
                   </Social>
                 )}
               </div>

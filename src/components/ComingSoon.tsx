@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import type { ReactNode } from "react";
 import { event } from "@/content/site";
+import DateText from "./DateText";
 import { Sticker } from "./Kochi";
 import { Asterisk, Globe, Hash, TabCard } from "./shapes";
 
@@ -50,7 +51,7 @@ export default function ComingSoon() {
         </h2>
         <div className="max-w-[40ch]">
           <p className="text-lg text-ink/75">
-            We&apos;re locking in tracks, sessions and speakers for {event.dateLabel}. Passes are open now, so grab yours before the reveal.
+            We&apos;re locking in tracks, sessions and speakers for <DateText text={event.dateLabel} />. Passes are open now, so grab yours before the reveal.
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             <a

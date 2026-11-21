@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { event } from "@/content/site";
+import DateText from "./DateText";
 import { Brace } from "./shapes";
 import { useNow } from "./use-now";
 
@@ -88,9 +89,9 @@ export default function Hero() {
           transition={{ delay: 1, duration: 0.5 }}
         >
           <time dateTime={event.start}>
-            <span className="sm:hidden">{event.shortLabel}</span>
+            <span className="sm:hidden"><DateText text={event.shortLabel} /></span>
             <span className="max-sm:hidden">
-              {event.dateLabel} · {event.timeLabel} · {event.place}
+              <DateText text={event.dateLabel} /> · {event.timeLabel} · {event.place}
             </span>
           </time>
         </motion.p>

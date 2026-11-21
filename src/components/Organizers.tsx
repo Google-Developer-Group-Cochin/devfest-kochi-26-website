@@ -49,11 +49,11 @@ export default function Organizers() {
 
       <ul className="mt-8 grid gap-5 sm:mt-12 sm:grid-cols-2">
         {organizers.map((o, i) => (
-          <li key={o.name} className="ink-border flex flex-col items-start gap-4 rounded-[22px] bg-white p-5 sm:flex-row sm:items-center sm:gap-6 sm:p-6">
+          <li key={o.name} className="ink-border flex flex-col items-center gap-4 rounded-[22px] bg-white px-5 pt-6 pb-5 text-center sm:flex-row sm:gap-6 sm:p-6 sm:text-left">
             {o.photo ? (
-              <img src={o.photo} alt="" loading="lazy" className="ink-border size-20 shrink-0 rounded-full object-cover sm:size-28" style={{ background: tints[i % tints.length] }} />
+              <img src={o.photo} alt="" loading="lazy" className="ink-border size-24 shrink-0 rounded-full object-cover sm:size-28" style={{ background: tints[i % tints.length] }} />
             ) : (
-              <span aria-hidden className="ink-border size-20 shrink-0 rounded-full sm:size-28" style={{ background: tints[i % tints.length] }} />
+              <span aria-hidden className="ink-border size-24 shrink-0 rounded-full sm:size-28" style={{ background: tints[i % tints.length] }} />
             )}
             <div className="min-w-0">
               <span className="inline-block rounded-full bg-(--track) px-2.5 py-0.5 font-mono text-xs transition-colors duration-500">{o.role}</span>
@@ -62,7 +62,7 @@ export default function Organizers() {
                 {o.job.includes(", ") ? o.job.slice(0, o.job.lastIndexOf(", ") + 2) : ""}
                 <strong className="font-bold text-ink">{o.job.includes(", ") ? o.job.slice(o.job.lastIndexOf(", ") + 2) : o.job}</strong>
               </p>
-              <div className="mt-3 flex gap-2">
+              <div className="mt-3 flex justify-center gap-2 sm:justify-start">
                 {o.linkedin && (
                   <Social href={o.linkedin} label={`${o.name} on LinkedIn`}>
                     <LinkedIn />

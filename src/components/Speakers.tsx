@@ -41,7 +41,7 @@ function PitchCard({ cells, pitch, featured }: { cells: number; pitch: ReactNode
   // Featured = 1 / 2 / 4 cols. Past years = 2 / 3 / 4. Using col-span-2 on a 1-col grid
   // creates an implicit second track and crushes the speaker cards into strips.
   const spans = featured
-    ? `col-span-1 ${cells % 2 === 0 ? "sm:col-span-2" : "sm:col-span-1"} ${span4[cells % 4]}`
+    ? `row-span-4 col-span-1 ${cells % 2 === 0 ? "sm:col-span-2" : "sm:col-span-1"} ${span4[cells % 4]}`
     : `${span2[cells % 2]} ${span3[cells % 3]} ${span4[cells % 4]}`;
   return (
     <motion.li
@@ -124,47 +124,91 @@ export default function Speakers() {
         <LayoutGroup>
           <ul
             key={edition.year}
-            className={`mt-6 grid grid-flow-dense gap-3 ${featured ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"}`}
+            className={`mt-6 grid grid-flow-dense ${featured ? "grid-cols-1 gap-x-3 sm:grid-cols-2 lg:grid-cols-4" : "grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"}`}
           >
             {edition.list.map((s) => {
               const on = open === s.name;
               const Icon = s.track ? trackIcon[s.track] : null;
               const tint = s.track ? trackColor[s.track].soft : "var(--color-pastel-yellow)";
               const canExpand = Boolean(s.talk || (featured && (s.bio || s.linkedin)));
-              return (
-                <motion.li
-                  layout
-                  key={s.name}
-                  transition={{ type: "spring", stiffness: 340, damping: 32 }}
-                  animate={featured ? { backgroundColor: on ? googleTint(s.name).fill : "#ffffff" } : undefined}
-                  className={`ink-border min-w-0 rounded-[22px] ${featured ? "" : "overflow-hidden bg-white"} ${on ? (featured ? "sm:col-span-2" : "col-span-2") : ""}`}
-                >
-                  <div className={`flex h-full flex-col ${featured ? "p-5 sm:p-6" : ""}`}>
+              const panel = (
+                <AnimatePresence initial={false}>
+                  {on && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0, transition: { delay: 0.12 } }}
+                      exit={{ opacity: 0, transition: { duration: 0.1 } }}
+                      className={`border-t-[1.5px] border-ink/15 pt-3 ${featured ? "relative z-10 mt-4" : "mx-4 mb-4 sm:mx-5 sm:mb-5"}`}
+                    >
+                      {s.talk && (
+                        <>
+                          <p className="flex items-center gap-1.5 font-mono text-xs text-ink-soft">
+                            {Icon && <Icon size={14} strokeWidth={3} />} The talk
+                          </p>
+                          <p className="mt-1 text-lg leading-snug sm:text-xl">{s.talk}</p>
+                        </>
+                      )}
+                      {featured && s.bio && <p className="mt-3 text-base leading-relaxed text-ink/80">{s.bio}</p>}
+                      {featured && (
+                        <div className="mt-4 flex flex-wrap items-center gap-2.5 sm:gap-3">
+                          {s.linkedin && (
+                            <a href={s.linkedin} target="_blank" rel="noopener" className="ink-border min-h-11 rounded-full bg-white px-4 py-2.5 text-sm font-bold transition-transform active:scale-95">
+                              LinkedIn
+                            </a>
+                          )}
+                          <button type="button" onClick={() => setShare(s)} className="ink-border min-h-11 rounded-full bg-ink px-4 py-2.5 text-sm font-bold text-paper transition-transform active:scale-95">
+                            Download share card
+                          </button>
+                        </div>
+                      )}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              );
+              const plus = canExpand && (
+                <motion.span aria-hidden animate={{ rotate: on ? 135 : 0 }} transition={{ type: "spring", stiffness: 420, damping: 28 }} className="grid size-8 shrink-0 place-items-center rounded-full border-[1.5px] border-ink text-lg leading-none">
+                  +
+                </motion.span>
+              );
+              const company = (
+                <>
+                  {s.role}
+                  {s.role && s.org && ", "}
+                  {s.org && <strong className="font-bold text-ink">{s.org}</strong>}
+                </>
+              );
+              // This year's cards share four rows (photo, name, title, tags) with their neighbours, so each
+              // line starts at the same height even when a name or title wraps. The button overlays the card.
+              if (featured) {
+                return (
+                  <motion.li
+                    layout
+                    key={s.name}
+                    transition={{ type: "spring", stiffness: 340, damping: 32 }}
+                    animate={{ backgroundColor: on ? googleTint(s.name).fill : "#ffffff" }}
+                    className={`ink-border relative isolate row-span-4 mb-3 grid min-w-0 grid-cols-[minmax(0,1fr)] grid-rows-subgrid gap-y-0 rounded-[22px] p-5 sm:p-6 ${on ? "sm:col-span-2" : ""}`}
+                  >
                     <button
                       type="button"
                       disabled={!canExpand}
+                      aria-label={s.name}
                       aria-expanded={canExpand ? on : undefined}
                       onClick={() => setOpen(on ? null : s.name)}
-                      className={`flex w-full min-w-0 flex-col text-left ${featured ? "" : "h-full p-4 sm:p-5"}`}
-                    >
-                      <motion.span layout="position" className="flex w-full items-start justify-between gap-3">
-                        <Portrait speaker={s} featured={featured} tint={tint} />
-                        {canExpand && (
-                          <motion.span aria-hidden animate={{ rotate: on ? 135 : 0 }} transition={{ type: "spring", stiffness: 420, damping: 28 }} className="grid size-8 shrink-0 place-items-center rounded-full border-[1.5px] border-ink text-lg leading-none">
-                            +
-                          </motion.span>
-                        )}
-                      </motion.span>
-                      <motion.span layout="position" className={`mt-4 block leading-tight font-bold ${featured ? "text-xl sm:text-2xl" : "text-lg"}`}>
-                        {s.name}
-                      </motion.span>
-                      <motion.span layout="position" className="mt-1 block text-sm text-ink/70">
-                        {s.role}
-                        {s.role && s.org && ", "}
-                        {s.org && <strong className="font-bold text-ink">{s.org}</strong>}
-                      </motion.span>
-                      {featured && !!s.badges?.length && (
-                        <motion.span layout="position" data-badges className="mt-3 flex flex-wrap gap-1.5">
+                      className="absolute inset-0 z-[1] rounded-[22px]"
+                    />
+                    <motion.span layout="position" className="flex w-full items-start justify-between gap-3">
+                      <Portrait speaker={s} featured tint={tint} />
+                      {plus}
+                    </motion.span>
+                    <motion.span layout="position" className="mt-4 block text-xl leading-tight font-bold sm:text-2xl">
+                      {s.name}
+                    </motion.span>
+                    <motion.span layout="position" className="mt-1 block text-sm text-ink/70">
+                      {company}
+                    </motion.span>
+                    <div>
+                      {!!s.badges?.length && (
+                        <motion.span layout="position" className="mt-3 flex flex-wrap gap-1.5">
                           {s.badges.map((b) => (
                             <span key={b} className="rounded-full border-[1.5px] border-ink/25 bg-white px-2.5 py-1 text-xs leading-tight text-ink/80">
                               {b}
@@ -172,40 +216,39 @@ export default function Speakers() {
                           ))}
                         </motion.span>
                       )}
+                      {panel}
+                    </div>
+                  </motion.li>
+                );
+              }
+              return (
+                <motion.li
+                  layout
+                  key={s.name}
+                  transition={{ type: "spring", stiffness: 340, damping: 32 }}
+                  className={`ink-border min-w-0 overflow-hidden rounded-[22px] bg-white ${on ? "col-span-2" : ""}`}
+                >
+                  <div className="flex h-full flex-col">
+                    <button
+                      type="button"
+                      disabled={!canExpand}
+                      aria-expanded={canExpand ? on : undefined}
+                      onClick={() => setOpen(on ? null : s.name)}
+                      className="flex h-full w-full min-w-0 flex-col p-4 text-left sm:p-5"
+                    >
+                      <motion.span layout="position" className="flex w-full items-start justify-between gap-3">
+                        <Portrait speaker={s} featured={false} tint={tint} />
+                        {plus}
+                      </motion.span>
+                      <motion.span layout="position" className="mt-4 block text-lg leading-tight font-bold">
+                        {s.name}
+                      </motion.span>
+                      <motion.span layout="position" className="mt-1 block text-sm text-ink/70">
+                        {company}
+                      </motion.span>
                     </button>
 
-                    <AnimatePresence initial={false}>
-                      {on && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 8 }}
-                          animate={{ opacity: 1, y: 0, transition: { delay: 0.12 } }}
-                          exit={{ opacity: 0, transition: { duration: 0.1 } }}
-                          className={`border-t-[1.5px] border-ink/15 pt-3 ${featured ? "mt-4" : "mx-4 mb-4 sm:mx-5 sm:mb-5"}`}
-                        >
-                          {s.talk && (
-                            <>
-                              <p className="flex items-center gap-1.5 font-mono text-xs text-ink-soft">
-                                {Icon && <Icon size={14} strokeWidth={3} />} The talk
-                              </p>
-                              <p className="mt-1 text-lg leading-snug sm:text-xl">{s.talk}</p>
-                            </>
-                          )}
-                          {featured && s.bio && <p className="mt-3 text-base leading-relaxed text-ink/80">{s.bio}</p>}
-                          {featured && (
-                            <div className="mt-4 flex flex-wrap items-center gap-2.5 sm:gap-3">
-                              {s.linkedin && (
-                                <a href={s.linkedin} target="_blank" rel="noopener" className="ink-border min-h-11 rounded-full bg-white px-4 py-2.5 text-sm font-bold transition-transform active:scale-95">
-                                  LinkedIn
-                                </a>
-                              )}
-                              <button type="button" onClick={() => setShare(s)} className="ink-border min-h-11 rounded-full bg-ink px-4 py-2.5 text-sm font-bold text-paper transition-transform active:scale-95">
-                                Download share card
-                              </button>
-                            </div>
-                          )}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                    {panel}
                   </div>
                 </motion.li>
               );

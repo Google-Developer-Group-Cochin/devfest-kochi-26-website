@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, LayoutGroup, motion } from "motion/react";
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { event, speakers, type Speaker } from "@/content/site";
 import { Sticker } from "./Kochi";
 import SpeakerShare, { googleTint } from "./SpeakerShare";
@@ -28,6 +28,25 @@ function Portrait({ speaker, featured, tint }: { speaker: Speaker; featured: boo
     <motion.span layout="position" aria-hidden className={`ink-border grid ${size} shrink-0 place-items-center rounded-full font-bold ${featured ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl"}`} style={{ background: tint }}>
       {initials(speaker.name)}
     </motion.span>
+  );
+}
+
+// Spans that make the closing card fill whatever is left of the last row (a full row when it's already complete)
+// at each breakpoint's column count: 2 on phones, 3 from sm, 4 from lg. Static strings so Tailwind picks them up.
+const span2 = ["col-span-2", "col-span-1"];
+const span3 = ["sm:col-span-3", "sm:col-span-2", "sm:col-span-1"];
+const span4 = ["lg:col-span-4", "lg:col-span-3", "lg:col-span-2", "lg:col-span-1"];
+
+function PitchCard({ cells, pitch }: { cells: number; pitch: ReactNode }) {
+  return (
+    <motion.li
+      layout
+      transition={{ type: "spring", stiffness: 340, damping: 32 }}
+      className={`flex flex-col justify-center rounded-[22px] border-2 border-dashed border-ink/40 bg-(--track-soft) p-5 transition-colors duration-500 ${span2[cells % 2]} ${span3[cells % 3]} ${span4[cells % 4]}`}
+    >
+      <span className="text-lg leading-tight font-bold">Your face here in 2026?</span>
+      <span className="mt-1.5 text-sm text-ink/75">The lineup is still open. {pitch}.</span>
+    </motion.li>
   );
 }
 
@@ -103,27 +122,38 @@ export default function Speakers() {
               const on = open === s.name;
               const Icon = s.track ? trackIcon[s.track] : null;
               const tint = s.track ? trackColor[s.track].soft : "var(--color-pastel-yellow)";
+              const canExpand = Boolean(s.talk || (featured && (s.bio || s.linkedin)));
               return (
                 <motion.li
                   layout
                   key={s.name}
                   transition={{ type: "spring", stiffness: 340, damping: 32 }}
                   animate={featured ? { backgroundColor: on ? googleTint(s.name).fill : "#ffffff" } : undefined}
-                  className={`ink-border rounded-[22px] ${featured ? "" : "bg-white"} ${on ? (featured ? "sm:col-span-2" : "col-span-2") : ""}`}
+                  className={`ink-border rounded-[22px] ${featured ? "" : "overflow-hidden bg-white"} ${on ? (featured ? "sm:col-span-2" : "col-span-2") : ""}`}
                 >
-                  <div className={`flex h-full flex-col ${featured ? "p-5 sm:p-6" : "p-4 sm:p-5"}`}>
-                    <button type="button" aria-expanded={on} onClick={() => setOpen(on ? null : s.name)} className="flex w-full flex-col text-left">
+                  <div className={`flex h-full flex-col ${featured ? "p-5 sm:p-6" : ""}`}>
+                    <button
+                      type="button"
+                      disabled={!canExpand}
+                      aria-expanded={canExpand ? on : undefined}
+                      onClick={() => setOpen(on ? null : s.name)}
+                      className={`flex w-full flex-col text-left ${featured ? "" : "h-full p-4 sm:p-5"}`}
+                    >
                       <motion.span layout="position" className="flex w-full items-start justify-between gap-3">
                         <Portrait speaker={s} featured={featured} tint={tint} />
-                        <motion.span aria-hidden animate={{ rotate: on ? 135 : 0 }} transition={{ type: "spring", stiffness: 420, damping: 28 }} className="grid size-8 shrink-0 place-items-center rounded-full border-[1.5px] border-ink text-lg leading-none">
-                          +
-                        </motion.span>
+                        {canExpand && (
+                          <motion.span aria-hidden animate={{ rotate: on ? 135 : 0 }} transition={{ type: "spring", stiffness: 420, damping: 28 }} className="grid size-8 shrink-0 place-items-center rounded-full border-[1.5px] border-ink text-lg leading-none">
+                            +
+                          </motion.span>
+                        )}
                       </motion.span>
                       <motion.span layout="position" className={`mt-4 block leading-tight font-bold ${featured ? "text-xl sm:text-2xl" : "text-lg"}`}>
                         {s.name}
                       </motion.span>
                       <motion.span layout="position" className="mt-1 block text-sm text-ink/70">
-                        {[s.role, s.org].filter(Boolean).join(", ")}
+                        {s.role}
+                        {s.role && s.org && ", "}
+                        {s.org && <strong className="font-bold text-ink">{s.org}</strong>}
                       </motion.span>
                     </button>
 
@@ -133,7 +163,7 @@ export default function Speakers() {
                           initial={{ opacity: 0, y: 8 }}
                           animate={{ opacity: 1, y: 0, transition: { delay: 0.12 } }}
                           exit={{ opacity: 0, transition: { duration: 0.1 } }}
-                          className="mt-4 border-t-[1.5px] border-ink/20 pt-3"
+                          className={`border-t-[1.5px] border-ink/15 pt-3 ${featured ? "mt-4" : "mx-4 mb-4 sm:mx-5 sm:mb-5"}`}
                         >
                           {s.talk && (
                             <>
@@ -163,6 +193,7 @@ export default function Speakers() {
                 </motion.li>
               );
             })}
+            <PitchCard cells={edition.list.length + (open ? 1 : 0)} pitch={pitch} />
           </ul>
         </LayoutGroup>
       )}

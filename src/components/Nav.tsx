@@ -4,12 +4,13 @@ import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/
 import { useLenis } from "lenis/react";
 import { useEffect, useRef, useState } from "react";
 import { event } from "@/content/site";
+import DateText from "./DateText";
 import { GdgLogo } from "./shapes";
 
 const links = [
-  { href: "#tracks", label: "Tracks" },
-  { href: "#agenda", label: "Agenda" },
+  { href: "#lineup", label: "Lineup" },
   { href: "#speakers", label: "Speakers" },
+  { href: "#team", label: "Team" },
   { href: "#badge", label: "Badge" },
   { href: "#venue", label: "Venue" },
   { href: "#faq", label: "FAQ" },
@@ -108,7 +109,7 @@ export default function Nav() {
               ))}
             </ul>
             <p className="mt-10 font-mono text-sm text-ink-soft [@media(max-height:520px)]:mt-4">
-              {event.dateLabel}
+              <DateText text={event.dateLabel} />
               <br />
               {event.place}
             </p>

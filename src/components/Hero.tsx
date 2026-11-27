@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { event } from "@/content/site";
+import DateText from "./DateText";
 import { Brace } from "./shapes";
 import { useNow } from "./use-now";
 
@@ -40,11 +41,11 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={hero} id="top" className="relative flex min-h-[100svh] flex-col items-center justify-end overflow-hidden px-4 pt-24 pb-16 [mask-image:linear-gradient(to_top,transparent,black_3.5rem)] sm:justify-center sm:pt-28 sm:pb-10">
+    <section ref={hero} id="top" className="relative flex min-h-[100svh] flex-col items-center justify-end overflow-hidden px-4 pt-24 pb-16 [mask-image:linear-gradient(to_top,transparent,black_3.5rem)] sm:justify-center sm:pt-[clamp(5rem,12svh,7rem)] sm:pb-[clamp(3rem,7svh,4rem)]">
       {toybox && <Toybox source={hero} clear={content} />}
 
       <motion.div ref={content} style={{ y, scale, opacity }} className="pointer-events-none relative z-10 flex flex-col items-center text-center">
-        <h1 className="flex items-center gap-[0.04em] text-[clamp(3.3rem,16vw,11.5rem)] leading-[0.9] font-bold tracking-[-0.045em]">
+        <h1 className="flex items-center gap-[0.04em] text-[clamp(3.3rem,min(16vw,17.5svh),11.5rem)] leading-[0.9] font-bold tracking-[-0.045em]">
           <span className="sr-only">DevFest Kochi 2026</span>
           <motion.span aria-hidden initial={{ x: -60, opacity: 0, rotate: -12 }} animate={{ x: 0, opacity: 1, rotate: 0 }} transition={{ ...spring, delay: 0.15 }}>
             <Brace side="left" className="h-[1.15em] w-auto text-(--track) transition-colors duration-500" />
@@ -62,7 +63,7 @@ export default function Hero() {
         </h1>
 
         <motion.div
-          className="mt-3 flex items-stretch overflow-hidden rounded-full ink-border bg-white text-[clamp(1rem,2.6vw,1.6rem)] sm:mt-5"
+          className="mt-3 flex items-stretch overflow-hidden rounded-full ink-border bg-white text-[clamp(1rem,min(2.6vw,3.4svh),1.6rem)] sm:mt-[clamp(0.5rem,2.2svh,1.25rem)]"
           initial={{ scaleX: 0.2, opacity: 0 }}
           animate={{ scaleX: 1, opacity: 1 }}
           transition={{ ...spring, delay: 0.6 }}
@@ -74,7 +75,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.p
-          className="mt-6 max-w-[30ch] text-[clamp(1.05rem,2.2vw,1.5rem)] leading-snug text-balance sm:mt-8"
+          className="mt-6 max-w-[30ch] text-[clamp(1.05rem,min(2.2vw,3svh),1.5rem)] leading-snug text-balance sm:max-w-none sm:whitespace-nowrap sm:mt-[clamp(0.75rem,3.5svh,2rem)]"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.85, duration: 0.5 }}
@@ -88,9 +89,9 @@ export default function Hero() {
           transition={{ delay: 1, duration: 0.5 }}
         >
           <time dateTime={event.start}>
-            <span className="sm:hidden">{event.shortLabel}</span>
+            <span className="sm:hidden"><DateText text={event.shortLabel} /></span>
             <span className="max-sm:hidden">
-              {event.dateLabel} · {event.timeLabel} · {event.place}
+              <DateText text={event.dateLabel} /> · {event.timeLabel} · {event.heroPlace}
             </span>
           </time>
         </motion.p>
@@ -99,7 +100,7 @@ export default function Hero() {
           href={event.ticketsUrl}
           target="_blank"
           rel="noopener"
-          className="group ink-border pointer-events-auto mt-7 inline-flex items-center gap-3 rounded-full bg-ink py-4 pr-4 pl-8 text-xl font-bold whitespace-nowrap text-paper transition-transform hover:-rotate-2 active:scale-95 sm:mt-9 sm:py-5 sm:pr-5 sm:pl-10 sm:text-2xl"
+          className="group ink-border pointer-events-auto mt-7 inline-flex items-center gap-3 rounded-full bg-ink py-4 pr-4 pl-8 text-xl font-bold whitespace-nowrap text-paper transition-transform hover:-rotate-2 active:scale-95 sm:mt-[clamp(1rem,4svh,2.25rem)] sm:py-[clamp(0.75rem,2.4svh,1.25rem)] sm:pr-5 sm:pl-10 sm:text-[clamp(1.25rem,3svh,1.5rem)] short:sm:py-2.5"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 0.5 }}
@@ -134,20 +135,20 @@ function Countdown() {
 
   if (now !== null && now >= start) {
     return (
-      <p className="mt-8 font-mono text-lg sm:mt-12" role="status">
-        {now < end ? `We're live at ${event.place} right now.` : "That's a wrap. See you at DevFest 2027."}
+      <p className="mt-8 font-mono text-lg sm:mt-[clamp(1rem,5svh,3rem)]" role="status">
+        {now < end ? `We're live at ${event.heroPlace} right now.` : "That's a wrap. See you at DevFest 2027."}
       </p>
     );
   }
 
   return (
-    <div className="mt-8 flex gap-2 sm:mt-12 sm:gap-3" role="timer" aria-label="Time until DevFest Kochi starts">
+    <div className="mt-8 flex gap-2 sm:mt-[clamp(1rem,5svh,3rem)] sm:gap-3 short:sm:mt-4" role="timer" aria-label="Time until DevFest Kochi starts">
       {units.map(([label, size, mod]) => {
         const value = left === null ? null : Math.floor(left / size) % mod;
         const text = value === null ? "--" : String(value).padStart(2, "0");
         return (
-          <div key={label} className="ink-border flex min-w-[4.1rem] flex-col items-center rounded-[1.25rem] bg-white/85 px-2.5 pt-1.5 pb-1 backdrop-blur-sm sm:min-w-[5.4rem] sm:rounded-3xl sm:px-3 sm:pt-2 sm:pb-1.5">
-            <span className="relative flex h-8 overflow-hidden font-mono text-[1.75rem] leading-8 font-medium tabular-nums sm:h-11 sm:text-4xl sm:leading-11">
+          <div key={label} className="ink-border flex min-w-[4.1rem] flex-col items-center rounded-[1.25rem] bg-white/85 px-2.5 pt-1.5 pb-1 backdrop-blur-sm sm:min-w-[5.4rem] sm:rounded-3xl sm:px-3 sm:pt-2 sm:pb-1.5 short:sm:min-w-[4.4rem] short:sm:rounded-[1.25rem] short:sm:pt-1 short:sm:pb-0.5">
+            <span className="relative flex h-8 overflow-hidden font-mono text-[1.75rem] leading-8 font-medium tabular-nums sm:h-11 sm:text-4xl sm:leading-11 short:sm:h-8 short:sm:text-[1.75rem] short:sm:leading-8">
               {text.split("").map((ch, i) => (
                 <AnimatePresence key={i} mode="popLayout" initial={false}>
                   <motion.span key={ch} initial={{ y: "-100%" }} animate={{ y: 0 }} exit={{ y: "100%" }} transition={{ type: "spring", stiffness: 500, damping: 34 }}>

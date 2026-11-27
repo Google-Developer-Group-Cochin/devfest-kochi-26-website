@@ -5,6 +5,26 @@ import { useId, useState } from "react";
 import { faqs } from "@/content/site";
 import { Sticker } from "./Kochi";
 
+// Turns emails and https links in an answer into real links.
+const linkPattern = /([\w.+-]+@[\w-]+\.[\w.]+[a-z]|https:\/\/[^\s]+[^\s.,])/gi;
+
+function linkify(text: string) {
+  return text.split(linkPattern).map((part, i) => {
+    if (i % 2 === 0) return part;
+    const email = part.includes("@") && !part.startsWith("http");
+    return (
+      <a
+        key={i}
+        href={email ? `mailto:${part}` : part}
+        {...(email ? {} : { target: "_blank", rel: "noopener" })}
+        className="font-bold text-ink underline decoration-2 underline-offset-4"
+      >
+        {email ? part : part.replace(/^https:\/\//, "")}
+      </a>
+    );
+  });
+}
+
 export default function Faq() {
   const [open, setOpen] = useState<number | null>(0);
   const base = useId();
@@ -51,7 +71,7 @@ export default function Faq() {
                     transition={{ type: "spring", stiffness: 300, damping: 34 }}
                     className="overflow-hidden"
                   >
-                    <p className="max-w-[60ch] pb-6 text-lg leading-relaxed text-ink/80">{f.a}</p>
+                    <p className="max-w-[60ch] pb-6 text-lg leading-relaxed text-ink/80">{linkify(f.a)}</p>
                   </motion.div>
                 )}
               </AnimatePresence>

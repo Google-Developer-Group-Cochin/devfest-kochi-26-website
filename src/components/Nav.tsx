@@ -3,12 +3,12 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useLenis } from "lenis/react";
 import { useEffect, useRef, useState } from "react";
-import { event } from "@/content/site";
+import { event, showTba } from "@/content/site";
 import DateText from "./DateText";
 import { GdgLogo } from "./shapes";
 
 const links = [
-  { href: "#lineup", label: "Lineup" },
+  ...(showTba.lineup ? [{ href: "#lineup", label: "Lineup" }] : []),
   { href: "#speakers", label: "Speakers" },
   { href: "#team", label: "Team" },
   { href: "#badge", label: "Badge" },

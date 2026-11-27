@@ -49,6 +49,12 @@ export type Speaker = {
 
 export const speakers = speakersJson as { intro: string; editions: { year: string; title: string; comingSoon?: boolean; list: Speaker[] }[] };
 
+/* TODO before the event: the "TBA" blocks below are hidden, not deleted, so we don't forget them.
+   - lineup: the "The lineup drops soon" section (ComingSoon.tsx) and its nav link. Tracks and agenda are still to be announced.
+   - team: the "The team" volunteers placeholder under the organizers (Organizers.tsx). Add the volunteers.
+   Set one to true to show it again. */
+export const showTba = { lineup: false, team: false };
+
 export const road: { date: string; title: string; detail: string; photo?: string; caption?: string }[] = roadJson;
 
 export const film: { photo: string; caption?: string }[] = filmJson;

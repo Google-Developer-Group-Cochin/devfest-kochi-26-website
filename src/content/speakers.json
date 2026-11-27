@@ -60,6 +60,28 @@
           "photo": "/speakers/geeta-kakrani-2026.jpg"
         },
         {
+          "name": "Adarsh K Kumar",
+          "role": "Principal Product Engineer",
+          "org": "Rapido",
+          "badges": [
+            "Co-organizer, CNCG Kochi",
+            "Co-organizer, AAIF Kochi"
+          ],
+          "talk": "TBA. Your title is on the way. The captain is two minutes away, for the last ten minutes.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/adarshkkumar",
+          "photo": "/speakers/adarsh-k-kumar-2026.jpg"
+        },
+        {
+          "name": "Ansil H",
+          "role": "AI Operations Technical Lead",
+          "org": "Cisco",
+          "talk": "TBA. The AI platform is still thinking about the title. Do not refresh.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/ansilh",
+          "photo": "/speakers/ansil-h-2026.jpg"
+        },
+        {
           "name": "Sudhish Nair",
           "role": "Principal Software Maintenance Engineer",
           "org": "Red Hat",
@@ -70,6 +92,19 @@
           "track": "",
           "linkedin": "https://www.linkedin.com/in/sudhishnnair",
           "photo": "/speakers/sudhish-nair-2026.jpg"
+        },
+        {
+          "name": "Vishnu K S",
+          "role": "Cloud Engineer III",
+          "org": "DP World",
+          "badges": [
+            "CKA & CKAD",
+            "Ex-Founder, xmigrate"
+          ],
+          "talk": "TBA. The title is still in transit. It's somewhere between two ports.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/iamvishnuks",
+          "photo": "/speakers/vishnu-k-s-2026.jpg"
         },
         {
           "name": "Akash Kamerkar",

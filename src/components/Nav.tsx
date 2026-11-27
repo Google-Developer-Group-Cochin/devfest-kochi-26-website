@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { useLenis } from "lenis/react";
 import { useEffect, useRef, useState } from "react";
 import { event, showTba } from "@/content/site";
@@ -116,43 +116,6 @@ export default function Nav() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      <TicketButton hidden={open} />
     </>
-  );
-}
-
-/* Phones only: the nav CTA is hidden there, so this takes over once the hero's button scrolls away. */
-function TicketButton({ hidden }: { hidden: boolean }) {
-  const [past, setPast] = useState(false);
-  const { scrollY } = useScroll();
-  useMotionValueEvent(scrollY, "change", () => {
-    const hero = document.getElementById("top");
-    const footer = document.querySelector("footer");
-    const heroGone = !hero || hero.getBoundingClientRect().bottom < window.innerHeight * 0.3;
-    setPast(heroGone && (!footer || footer.getBoundingClientRect().top > window.innerHeight));
-  });
-
-  return (
-    <AnimatePresence>
-      {past && !hidden && (
-        <motion.a
-          href={event.ticketsUrl}
-          target="_blank"
-          rel="noopener"
-          className="ink-border fixed right-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-40 inline-flex items-center gap-2 rounded-full bg-(--track) py-3 pr-5 pl-4 text-lg font-bold shadow-[3px_4px_0_var(--color-ink)] transition-colors duration-500 active:translate-y-0.5 active:shadow-[1px_2px_0_var(--color-ink)] md:hidden"
-          initial={{ y: 90, rotate: -8 }}
-          animate={{ y: 0, rotate: 0 }}
-          exit={{ y: 90, rotate: 8 }}
-          transition={{ type: "spring", stiffness: 420, damping: 26 }}
-        >
-          <svg aria-hidden width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round">
-            <path d="M3 8a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v2a2 2 0 0 0 0 4v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2a2 2 0 0 0 0-4Z" />
-            <path d="M14 7v10" strokeDasharray="2 2" />
-          </svg>
-          Get tickets
-        </motion.a>
-      )}
-    </AnimatePresence>
   );
 }

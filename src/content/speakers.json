@@ -33,21 +33,6 @@
           "photo": "/speakers/sanket-bisne-2026.jpg"
         },
         {
-          "name": "Adarsh K Kumar",
-          "role": "Principal Product Engineer",
-          "org": "Rapido",
-          "badges": [
-            "KubeCon India 2026 Keynote",
-            "KubeCon Europe 2026 Speaker",
-            "Co-organizer, CNCG Kochi",
-            "Co-organizer, AAIF Kochi"
-          ],
-          "talk": "TBA. Your title is on the way. The captain is two minutes away, for the last ten minutes.",
-          "track": "",
-          "linkedin": "https://www.linkedin.com/in/adarshkkumar",
-          "photo": "/speakers/adarsh-k-kumar-2026.jpg"
-        },
-        {
           "name": "Salman Faris",
           "role": "Community",
           "org": "Screenly",
@@ -73,6 +58,19 @@
           "track": "",
           "linkedin": "https://www.linkedin.com/in/geetakakrani",
           "photo": "/speakers/geeta-kakrani-2026.jpg"
+        },
+        {
+          "name": "Adarsh K Kumar",
+          "role": "Principal Product Engineer",
+          "org": "Rapido",
+          "badges": [
+            "Co-organizer, CNCG Kochi",
+            "Co-organizer, AAIF Kochi"
+          ],
+          "talk": "TBA. Your title is on the way. The captain is two minutes away, for the last ten minutes.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/adarshkkumar",
+          "photo": "/speakers/adarsh-k-kumar-2026.jpg"
         },
         {
           "name": "Ansil H",

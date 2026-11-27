@@ -255,8 +255,7 @@ export default function SpeakerShare({ speaker, onClose }: { speaker: Speaker; o
   useEffect(() => {
     const css = getComputedStyle(document.documentElement);
     const sans = css.getPropertyValue("--font-google-sans") || "sans-serif";
-    // Paint immediately with fallback fonts, then again once Google Sans is ready.
-    setPaint((n) => n + 1);
+    // The draw effect already painted with fallback fonts; repaint once Google Sans is ready.
     Promise.all([document.fonts.load(`700 100px ${sans}`), document.fonts.load(`400 100px ${sans}`)])
       .then(() => setPaint((n) => n + 1))
       .catch(() => setPaint((n) => n + 1));
@@ -273,7 +272,7 @@ export default function SpeakerShare({ speaker, onClose }: { speaker: Speaker; o
 
   useEffect(() => {
     const ctx = canvas.current?.getContext("2d");
-    if (!ctx || paint < 1) return;
+    if (!ctx) return;
     const css = getComputedStyle(document.documentElement);
     draw(ctx, speaker, css.getPropertyValue("--font-google-sans") || "sans-serif", css.getPropertyValue("--font-google-sans-code") || "monospace", photo);
   }, [speaker, paint, photo]);

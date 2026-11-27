@@ -92,6 +92,8 @@ content:
               - { name: org, label: Company or community, type: string }
               - { name: talk, label: Talk title, type: string }
               - { name: track, component: track, description: Leave empty if the talk isn't known yet. }
+              - { name: bio, label: Short bio, type: text, description: "For the 2026 cards and the share sheet. Leave empty for past editions." }
+              - { name: linkedin, label: LinkedIn URL, type: string, description: "Full profile URL, e.g. https://www.linkedin.com/in/…" }
               - { name: photo, type: image, options: { media: speakers }, description: Square photo works best. Leave empty to show initials. }
 
   - name: agenda

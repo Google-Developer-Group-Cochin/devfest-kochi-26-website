@@ -35,7 +35,16 @@ export type Session = {
 
 export const agenda = agendaJson as Session[];
 
-export type Speaker = { name: string; role: string; org: string; talk: string; track?: TrackId | ""; photo?: string };
+export type Speaker = {
+  name: string;
+  role: string;
+  org: string;
+  talk: string;
+  track?: TrackId | "";
+  photo?: string;
+  bio?: string;
+  linkedin?: string;
+};
 
 export const speakers = speakersJson as { intro: string; editions: { year: string; title: string; comingSoon?: boolean; list: Speaker[] }[] };
 

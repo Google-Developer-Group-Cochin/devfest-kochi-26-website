@@ -1,11 +1,52 @@
 {
-  "intro": "The '26 lineup is being finalised. Want to be on it?",
+  "intro": "Four talks locked in so far. The rest of the '26 lineup is still cooking. Want on it?",
   "editions": [
     {
       "year": "2026",
       "title": "Meet the 2026 speakers",
-      "comingSoon": true,
-      "list": []
+      "comingSoon": false,
+      "list": [
+        {
+          "name": "John Doe",
+          "role": "Staff Engineer",
+          "org": "Example Labs",
+          "talk": "Shipping agents that don't fall over",
+          "track": "ai",
+          "bio": "Builds production AI systems and talks about the boring parts: evals, latency budgets, and when not to use an LLM.",
+          "linkedin": "https://www.linkedin.com/in/johndoe",
+          "photo": "/speakers/john-doe-2026.jpg"
+        },
+        {
+          "name": "Jane Smith",
+          "role": "Android Developer",
+          "org": "Pixel North",
+          "talk": "Compose that still feels native",
+          "track": "mobile",
+          "bio": "Ships Kotlin apps and cares about motion, accessibility, and keeping the APK small enough to download on a ferry.",
+          "linkedin": "https://www.linkedin.com/in/janesmith",
+          "photo": "/speakers/jane-smith-2026.jpg"
+        },
+        {
+          "name": "Alex Kumar",
+          "role": "Cloud Architect",
+          "org": "BlueStack",
+          "talk": "Gemini on Cloud Run, without the drama",
+          "track": "cloud",
+          "bio": "Helps teams move from demo notebooks to services that survive a Monday morning traffic spike.",
+          "linkedin": "https://www.linkedin.com/in/alexkumar",
+          "photo": "/speakers/alex-kumar-2026.jpg"
+        },
+        {
+          "name": "Priya Nair",
+          "role": "Frontend Lead",
+          "org": "Kochi Commons",
+          "talk": "Web apps that feel like stickers",
+          "track": "web",
+          "bio": "Design-engineer hybrid who turns brand kits into fast, opinionated UIs. Based in Kochi, usually near a chaaya.",
+          "linkedin": "https://www.linkedin.com/in/priyanair",
+          "photo": "/speakers/priya-nair-2026.jpg"
+        }
+      ]
     },
     {
       "year": "2025",
@@ -90,8 +131,8 @@
           "track": "cloud"
         },
         {
-      "name": "Adarsh K Kumar",
-      "role": "",
+          "name": "Adarsh K Kumar",
+          "role": "",
           "org": "Rapido",
           "talk": "Running Go applications in Kubernetes",
           "track": "cloud"

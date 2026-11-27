@@ -76,6 +76,10 @@
           "name": "Ansil H",
           "role": "AI Operations Technical Lead",
           "org": "Cisco",
+          "badges": [
+            "Co-organizer, CNCG Kochi",
+            "Co-organizer, AAIF Kochi"
+          ],
           "talk": "TBA. The AI platform is still thinking about the title. Do not refresh.",
           "track": "",
           "linkedin": "https://www.linkedin.com/in/ansilh",
@@ -98,6 +102,8 @@
           "role": "Cloud Engineer III",
           "org": "DP World",
           "badges": [
+            "Co-organizer, CNCG Kochi",
+            "Co-organizer, AAIF Kochi",
             "CKA & CKAD",
             "Ex-Founder, xmigrate"
           ],

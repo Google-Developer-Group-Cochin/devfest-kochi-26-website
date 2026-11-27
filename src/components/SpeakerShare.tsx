@@ -186,19 +186,25 @@ function draw(ctx: CanvasRenderingContext2D, speaker: Speaker, sans: string, mon
   ctx.fillStyle = INK;
   ctx.fillText(speaker.name, W / 2, 1002);
 
-  // Role / org under the name — wraps, and shrinks until the box clears the date line.
-  const meta = [speaker.role, speaker.org].filter(Boolean).join(" · ") || "Speaker";
+  // Job title with the company in bold under it; both shrink until the box clears the date line.
+  const parts = [
+    { text: speaker.role, weight: 500 },
+    { text: speaker.org, weight: 700 },
+  ].filter((p) => p.text);
+  if (!parts.length) parts.push({ text: "Speaker", weight: 500 });
   let metaSize = 38;
-  let lines: string[];
+  let lines: { text: string; weight: number; width: number }[];
   let lh: number;
   for (;;) {
-    ctx.font = `500 ${metaSize}px ${sans}`;
-    lines = wrap(ctx, meta, 820);
+    lines = parts.flatMap(({ text, weight }) => {
+      ctx.font = `${weight} ${metaSize}px ${sans}`;
+      return wrap(ctx, text, 820).map((line) => ({ text: line, weight, width: ctx.measureText(line).width }));
+    });
     lh = Math.round(metaSize * 1.25);
     if (lines.length * lh + 32 <= 144 || metaSize <= 22) break;
     metaSize -= 2;
   }
-  const rw = Math.min(Math.max(...lines.map((l) => ctx.measureText(l).width)) + 80, 900);
+  const rw = Math.min(Math.max(...lines.map((l) => l.width)) + 80, 900);
   const rh = lines.length * lh + 32;
   ctx.beginPath();
   ctx.roundRect((W - rw) / 2, 1026, rw, rh, Math.min(rh / 2, 42));
@@ -208,7 +214,10 @@ function draw(ctx: CanvasRenderingContext2D, speaker: Speaker, sans: string, mon
   ctx.stroke();
   ctx.fillStyle = INK;
   ctx.textBaseline = "middle";
-  lines.forEach((line, i) => ctx.fillText(line, W / 2, 1026 + 16 + lh * (i + 0.5)));
+  lines.forEach((l, i) => {
+    ctx.font = `${l.weight} ${metaSize}px ${sans}`;
+    ctx.fillText(l.text, W / 2, 1026 + 16 + lh * (i + 0.5));
+  });
   ctx.textBaseline = "alphabetic";
 
   // Date · place + hashtag — slightly larger so the preview stays readable on phones.

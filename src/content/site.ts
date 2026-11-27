@@ -39,6 +39,7 @@ export type Speaker = {
   name: string;
   role: string;
   org: string;
+  badges?: string[];
   talk: string;
   track?: TrackId | "";
   photo?: string;

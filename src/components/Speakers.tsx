@@ -163,6 +163,15 @@ export default function Speakers() {
                         {s.role && s.org && ", "}
                         {s.org && <strong className="font-bold text-ink">{s.org}</strong>}
                       </motion.span>
+                      {featured && !!s.badges?.length && (
+                        <motion.span layout="position" data-badges className="mt-3 flex flex-wrap gap-1.5">
+                          {s.badges.map((b) => (
+                            <span key={b} className="rounded-full border-[1.5px] border-ink/25 bg-white px-2.5 py-1 text-xs leading-tight text-ink/80">
+                              {b}
+                            </span>
+                          ))}
+                        </motion.span>
+                      )}
                     </button>
 
                     <AnimatePresence initial={false}>

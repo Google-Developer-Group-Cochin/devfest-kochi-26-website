@@ -85,11 +85,12 @@ content:
             list:
               collapsible:
                 collapsed: true
-                summary: "{name}"
+                summary: "{name} ({org})"
             fields:
               - { name: name, type: string, required: true }
-              - { name: role, label: Job title, type: string, description: "The full line shown on the card, e.g. Engineer at Acme; Google Developer Expert" }
-              - { name: org, label: Company or community, type: string, description: Leave empty if the company is already in the job title. }
+              - { name: role, label: Job title, type: string, description: "One title only, e.g. Senior Cloud Engineer" }
+              - { name: org, label: Company or community, type: string, description: Shown in bold after the job title. }
+              - { name: badges, label: Other titles, type: string, list: true, description: "2026 cards only. One short title per entry, e.g. Women Techmakers Ambassador" }
               - { name: talk, label: Talk title, type: string }
               - { name: track, component: track, description: Leave empty if the talk isn't known yet. }
               - { name: bio, label: Short bio, type: text, description: "For the 2026 cards and the share sheet. Leave empty for past editions." }

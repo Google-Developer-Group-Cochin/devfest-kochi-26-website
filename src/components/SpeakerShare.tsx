@@ -36,6 +36,16 @@ function pill(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h:
   ctx.stroke();
 }
 
+function wrap(ctx: CanvasRenderingContext2D, text: string, max: number) {
+  const lines: string[] = [];
+  for (const word of text.split(" ")) {
+    const next = lines.length ? `${lines[lines.length - 1]} ${word}` : word;
+    if (lines.length && ctx.measureText(next).width <= max) lines[lines.length - 1] = next;
+    else lines.push(word);
+  }
+  return lines;
+}
+
 function draw(ctx: CanvasRenderingContext2D, speaker: Speaker, sans: string, mono: string, photo: HTMLImageElement | null) {
   const { fill, accent } = googleTint(speaker.name);
 
@@ -133,8 +143,8 @@ function draw(ctx: CanvasRenderingContext2D, speaker: Speaker, sans: string, mon
   ctx.fillText("2026", px + kochiW + 35, py + 58);
 
   // Centered photo with offset accent ring — same placement as the attendee card.
-  const r = 145;
-  const cy = 814;
+  const r = 130;
+  const cy = 796;
   ctx.lineWidth = 6;
   ctx.beginPath();
   ctx.arc(W / 2 + 12, cy + 10, r, 0, Math.PI * 2);
@@ -174,17 +184,32 @@ function draw(ctx: CanvasRenderingContext2D, speaker: Speaker, sans: string, mon
   ctx.font = `700 ${size}px ${sans}`;
   while (ctx.measureText(speaker.name).width > 860 && size > 48) ctx.font = `700 ${(size -= 4)}px ${sans}`;
   ctx.fillStyle = INK;
-  ctx.fillText(speaker.name, W / 2, 1042);
+  ctx.fillText(speaker.name, W / 2, 1002);
 
-  // Role / org pill under the name.
+  // Role / org under the name — wraps, and shrinks until the box clears the date line.
   const meta = [speaker.role, speaker.org].filter(Boolean).join(" · ") || "Speaker";
-  ctx.font = `500 44px ${sans}`;
-  let metaSize = 44;
-  while (ctx.measureText(meta).width > 780 && metaSize > 28) ctx.font = `500 ${(metaSize -= 2)}px ${sans}`;
-  const rw = Math.min(ctx.measureText(meta).width + 80, 900);
-  pill(ctx, (W - rw) / 2, 1066, rw, 84, "#ffffff");
+  let metaSize = 38;
+  let lines: string[];
+  let lh: number;
+  for (;;) {
+    ctx.font = `500 ${metaSize}px ${sans}`;
+    lines = wrap(ctx, meta, 820);
+    lh = Math.round(metaSize * 1.25);
+    if (lines.length * lh + 32 <= 144 || metaSize <= 22) break;
+    metaSize -= 2;
+  }
+  const rw = Math.min(Math.max(...lines.map((l) => ctx.measureText(l).width)) + 80, 900);
+  const rh = lines.length * lh + 32;
+  ctx.beginPath();
+  ctx.roundRect((W - rw) / 2, 1026, rw, rh, Math.min(rh / 2, 42));
+  ctx.fillStyle = "#ffffff";
+  ctx.fill();
+  ctx.lineWidth = 4;
+  ctx.stroke();
   ctx.fillStyle = INK;
-  ctx.fillText(meta, W / 2, 1123);
+  ctx.textBaseline = "middle";
+  lines.forEach((line, i) => ctx.fillText(line, W / 2, 1026 + 16 + lh * (i + 0.5)));
+  ctx.textBaseline = "alphabetic";
 
   // Date · place + hashtag — slightly larger so the preview stays readable on phones.
   ctx.font = `400 38px ${mono}`;
@@ -196,9 +221,9 @@ function draw(ctx: CanvasRenderingContext2D, speaker: Speaker, sans: string, mon
     year: "numeric",
     timeZone: "Asia/Kolkata",
   });
-  ctx.fillText(`${day} · ${event.place}`, W / 2, 1198);
+  ctx.fillText(`${day} · ${event.place}`, W / 2, 1212);
   ctx.font = `700 38px ${mono}`;
-  ctx.fillText("#DevFestKochi", W / 2, 1248);
+  ctx.fillText("#DevFestKochi", W / 2, 1258);
   ctx.textAlign = "left";
 }
 

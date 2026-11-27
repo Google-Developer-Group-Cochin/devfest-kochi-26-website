@@ -1,5 +1,5 @@
 {
-  "intro": "Four talks locked in so far. The rest of the '26 lineup is still cooking. Want on it?",
+  "intro": "The first speakers for '26 are in. Talk titles are still a closely guarded secret. Want to join them?",
   "editions": [
     {
       "year": "2026",
@@ -7,44 +7,112 @@
       "comingSoon": false,
       "list": [
         {
-          "name": "John Doe",
-          "role": "Staff Engineer",
-          "org": "Example Labs",
-          "talk": "Shipping agents that don't fall over",
-          "track": "ai",
-          "bio": "Builds production AI systems and talks about the boring parts: evals, latency budgets, and when not to use an LLM.",
-          "linkedin": "https://www.linkedin.com/in/johndoe",
-          "photo": "/speakers/john-doe-2026.jpg"
+          "name": "Salman Faris",
+          "role": "Community at Screenly; Edge Impulse Expert Team member; Qualcomm Ambassador; co-founder of MakerGram",
+          "org": "",
+          "talk": "TBA. This talk is stuck in a breadboard. Please don't touch the jumper wires.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/salmanfarisvp",
+          "photo": "/speakers/salman-faris-2026.jpg"
         },
         {
-          "name": "Jane Smith",
-          "role": "Android Developer",
-          "org": "Pixel North",
-          "talk": "Compose that still feels native",
-          "track": "mobile",
-          "bio": "Ships Kotlin apps and cares about motion, accessibility, and keeping the APK small enough to download on a ferry.",
-          "linkedin": "https://www.linkedin.com/in/janesmith",
-          "photo": "/speakers/jane-smith-2026.jpg"
+          "name": "G Pavithra",
+          "role": "Senior Technical Member at TANUH-AI, IISc",
+          "org": "",
+          "talk": "TBA. Still converging. Gradient descent says just one more step.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/g-pavithra-703522191",
+          "photo": "/speakers/g-pavithra-2026.jpg"
         },
         {
-          "name": "Alex Kumar",
-          "role": "Cloud Architect",
-          "org": "BlueStack",
-          "talk": "Gemini on Cloud Run, without the drama",
-          "track": "cloud",
-          "bio": "Helps teams move from demo notebooks to services that survive a Monday morning traffic spike.",
-          "linkedin": "https://www.linkedin.com/in/alexkumar",
-          "photo": "/speakers/alex-kumar-2026.jpg"
+          "name": "Geeta Kakrani",
+          "role": "Founder & AI Consultant at Kanishka IT; Google Developer Expert (AI/ML); Women Techmakers Ambassador",
+          "org": "",
+          "talk": "TBA. We asked an AI for the title. It replied “Great question!” and nothing else.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/geetakakrani",
+          "photo": "/speakers/geeta-kakrani-2026.jpg"
         },
         {
-          "name": "Priya Nair",
-          "role": "Frontend Lead",
-          "org": "Kochi Commons",
-          "talk": "Web apps that feel like stickers",
-          "track": "web",
-          "bio": "Design-engineer hybrid who turns brand kits into fast, opinionated UIs. Based in Kochi, usually near a chaaya.",
-          "linkedin": "https://www.linkedin.com/in/priyanair",
-          "photo": "/speakers/priya-nair-2026.jpg"
+          "name": "Akash Kamerkar",
+          "role": "Senior Data Scientist at ABB; Founding Member of DevRelSquad",
+          "org": "",
+          "talk": "TBA. Our model predicts the title with 99% confidence. It is wrong.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/akash-kamerkar-datascientist",
+          "photo": "/speakers/akash-kamerkar-2026.jpg"
+        },
+        {
+          "name": "Sanket Bisne",
+          "role": "Sr. Enterprise AI & Cloud Engineer at Motive; Google Developer Expert (Cloud); Google Cloud Champion Innovator",
+          "org": "",
+          "talk": "TBA. Deploying the title… build failed. Retrying in the cloud.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/sanketbisne",
+          "photo": "/speakers/sanket-bisne-2026.jpg"
+        },
+        {
+          "name": "Divyanshu Bhargava",
+          "role": "Co-founder of Stac; Google Developer Expert (Flutter & Dart); Organizer of Flutter Abu Dhabi & Dubai",
+          "org": "",
+          "talk": "TBA. Title loading from the server. Please enjoy this spinner.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/divyanshub024",
+          "photo": "/speakers/divyanshu-bhargava-2026.jpg"
+        },
+        {
+          "name": "Advaith U",
+          "role": "Pre-Seed Investments at y0; previously led Friends of Figma India",
+          "org": "",
+          "talk": "TBA. Title is in stealth mode. Raising a pre-seed round to reveal it.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/advaithu",
+          "photo": "/speakers/advaith-u-2026.jpg"
+        },
+        {
+          "name": "Poushali Chattopadhyay",
+          "role": "DevSecOps Engineer at Daimler Truck Innovation Center India; Women Techmakers Ambassador; CKA",
+          "org": "",
+          "talk": "TBA. The title failed the security scan. Redacted until further notice.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/poushali-chattopadhyay",
+          "photo": "/speakers/poushali-chattopadhyay-2026.jpg"
+        },
+        {
+          "name": "Yash Thakare",
+          "role": "Software Engineer at Liferay; Full Stack Developer & AI Engineer; Google AI Mentor",
+          "org": "",
+          "talk": "TBA. Will be finished five minutes before the deadline, hackathon style.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/yashthakare",
+          "photo": "/speakers/yash-thakare-2026.jpg"
+        },
+        {
+          "name": "Sudhish Nair",
+          "role": "Principal Software Maintenance Engineer at Red Hat; Speaker & Tech Blogger",
+          "org": "",
+          "talk": "TBA. The title is under maintenance. Have you tried turning it off and on again?",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/sudhishnnair",
+          "photo": "/speakers/sudhish-nair-2026.jpg"
+        },
+        {
+          "name": "Mathews Shaji",
+          "role": "Senior Platform Engineering Lead at CloudPositive",
+          "org": "",
+          "talk": "TBA. It works on my machine. The title has not been deployed yet.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/mathews-shaji",
+          "photo": "/speakers/mathews-shaji-2026.jpg"
+        },
+        {
+          "name": "Nikhil K Menon",
+          "role": "AI/ML Intern at Orion Innovation; previously research intern at IIT Palakkad",
+          "org": "",
+          "talk": "TBA. Five agents are debating the title. A Raspberry Pi has the casting vote.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/nikhil-k-menon",
+          "photo": "/speakers/nikhil-k-menon-2026.jpg"
         }
       ]
     },

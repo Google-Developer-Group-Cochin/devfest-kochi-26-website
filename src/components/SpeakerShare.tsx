@@ -206,7 +206,7 @@ export default function SpeakerShare({ speaker, onClose }: { speaker: Speaker; o
   const dialog = useRef<HTMLDialogElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
   const lenis = useLenis();
-  const [ready, setReady] = useState(false);
+  const [paint, setPaint] = useState(0);
   const [loaded, setLoaded] = useState<{ src: string; img: HTMLImageElement } | null>(null);
   const photo = speaker.photo && loaded?.src === speaker.photo ? loaded.img : null;
 
@@ -221,7 +221,11 @@ export default function SpeakerShare({ speaker, onClose }: { speaker: Speaker; o
   useEffect(() => {
     const css = getComputedStyle(document.documentElement);
     const sans = css.getPropertyValue("--font-google-sans") || "sans-serif";
-    Promise.all([document.fonts.load(`700 100px ${sans}`), document.fonts.load(`400 100px ${sans}`)]).then(() => setReady(true));
+    // Paint immediately with fallback fonts, then again once Google Sans is ready.
+    setPaint((n) => n + 1);
+    Promise.all([document.fonts.load(`700 100px ${sans}`), document.fonts.load(`400 100px ${sans}`)])
+      .then(() => setPaint((n) => n + 1))
+      .catch(() => setPaint((n) => n + 1));
   }, []);
 
   useEffect(() => {
@@ -229,15 +233,16 @@ export default function SpeakerShare({ speaker, onClose }: { speaker: Speaker; o
     const src = speaker.photo;
     const img = new Image();
     img.onload = () => setLoaded({ src, img });
+    img.onerror = () => setLoaded(null);
     img.src = src;
   }, [speaker.photo]);
 
   useEffect(() => {
     const ctx = canvas.current?.getContext("2d");
-    if (!ctx || !ready) return;
+    if (!ctx || paint < 1) return;
     const css = getComputedStyle(document.documentElement);
     draw(ctx, speaker, css.getPropertyValue("--font-google-sans") || "sans-serif", css.getPropertyValue("--font-google-sans-code") || "monospace", photo);
-  }, [speaker, ready, photo]);
+  }, [speaker, paint, photo]);
 
   async function download() {
     const blob = await new Promise<Blob | null>((r) => canvas.current?.toBlob(r, "image/png"));

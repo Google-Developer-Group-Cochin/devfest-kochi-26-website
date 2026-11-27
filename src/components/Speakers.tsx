@@ -20,7 +20,7 @@ const editions = speakers.editions.filter((e) => e.comingSoon || e.list.length);
 const currentYear = event.start.slice(0, 4);
 
 function Portrait({ speaker, featured, tint }: { speaker: Speaker; featured: boolean; tint: string }) {
-  const size = featured ? "size-16 xs:size-20 sm:size-28 lg:size-32" : "size-16 sm:size-20";
+  const size = featured ? "size-28 sm:size-32" : "size-16 sm:size-20";
   if (speaker.photo) {
     return <motion.img layout="position" src={speaker.photo} alt="" loading="lazy" className={`ink-border ${size} shrink-0 rounded-full object-cover object-top`} style={{ background: tint }} />;
   }
@@ -37,12 +37,17 @@ const span2 = ["col-span-2", "col-span-1"];
 const span3 = ["sm:col-span-3", "sm:col-span-2", "sm:col-span-1"];
 const span4 = ["lg:col-span-4", "lg:col-span-3", "lg:col-span-2", "lg:col-span-1"];
 
-function PitchCard({ cells, pitch }: { cells: number; pitch: ReactNode }) {
+function PitchCard({ cells, pitch, featured }: { cells: number; pitch: ReactNode; featured?: boolean }) {
+  // Featured = 1 / 2 / 4 cols. Past years = 2 / 3 / 4. Using col-span-2 on a 1-col grid
+  // creates an implicit second track and crushes the speaker cards into strips.
+  const spans = featured
+    ? `col-span-1 ${cells % 2 === 0 ? "sm:col-span-2" : "sm:col-span-1"} ${span4[cells % 4]}`
+    : `${span2[cells % 2]} ${span3[cells % 3]} ${span4[cells % 4]}`;
   return (
     <motion.li
       layout
       transition={{ type: "spring", stiffness: 340, damping: 32 }}
-      className={`flex flex-col justify-center rounded-[22px] border-2 border-dashed border-ink/40 bg-(--track-soft) p-5 transition-colors duration-500 ${span2[cells % 2]} ${span3[cells % 3]} ${span4[cells % 4]}`}
+      className={`flex flex-col justify-center rounded-[22px] border-2 border-dashed border-ink/40 bg-(--track-soft) p-5 transition-colors duration-500 ${spans}`}
     >
       <span className="text-lg leading-tight font-bold">Your face here in 2026?</span>
       <span className="mt-1.5 text-sm text-ink/75">The lineup is still open. {pitch}.</span>
@@ -117,7 +122,10 @@ export default function Speakers() {
         </motion.div>
       ) : (
         <LayoutGroup>
-          <ul key={edition.year} className="mt-6 grid grid-flow-dense grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          <ul
+            key={edition.year}
+            className={`mt-6 grid grid-flow-dense gap-3 ${featured ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"}`}
+          >
             {edition.list.map((s) => {
               const on = open === s.name;
               const Icon = s.track ? trackIcon[s.track] : null;
@@ -129,17 +137,17 @@ export default function Speakers() {
                   key={s.name}
                   transition={{ type: "spring", stiffness: 340, damping: 32 }}
                   animate={featured ? { backgroundColor: on ? googleTint(s.name).fill : "#ffffff" } : undefined}
-                  className={`ink-border rounded-[22px] ${featured ? "" : "overflow-hidden bg-white"} ${on ? "col-span-2" : ""}`}
+                  className={`ink-border min-w-0 rounded-[22px] ${featured ? "" : "overflow-hidden bg-white"} ${on ? (featured ? "sm:col-span-2" : "col-span-2") : ""}`}
                 >
-                  <div className={`flex h-full flex-col ${featured ? "p-4 sm:p-5 lg:p-6" : ""}`}>
+                  <div className={`flex h-full flex-col ${featured ? "p-5 sm:p-6" : ""}`}>
                     <button
                       type="button"
                       disabled={!canExpand}
                       aria-expanded={canExpand ? on : undefined}
                       onClick={() => setOpen(on ? null : s.name)}
-                      className={`flex w-full flex-col text-left ${featured ? "" : "h-full p-4 sm:p-5"}`}
+                      className={`flex w-full min-w-0 flex-col text-left ${featured ? "" : "h-full p-4 sm:p-5"}`}
                     >
-                      <motion.span layout="position" className="flex w-full items-start justify-between gap-2 sm:gap-3">
+                      <motion.span layout="position" className="flex w-full items-start justify-between gap-3">
                         <Portrait speaker={s} featured={featured} tint={tint} />
                         {canExpand && (
                           <motion.span aria-hidden animate={{ rotate: on ? 135 : 0 }} transition={{ type: "spring", stiffness: 420, damping: 28 }} className="grid size-8 shrink-0 place-items-center rounded-full border-[1.5px] border-ink text-lg leading-none">
@@ -147,7 +155,7 @@ export default function Speakers() {
                           </motion.span>
                         )}
                       </motion.span>
-                      <motion.span layout="position" className={`mt-3 block leading-tight font-bold sm:mt-4 ${featured ? "text-base sm:text-xl lg:text-2xl" : "text-lg"}`}>
+                      <motion.span layout="position" className={`mt-4 block leading-tight font-bold ${featured ? "text-xl sm:text-2xl" : "text-lg"}`}>
                         {s.name}
                       </motion.span>
                       <motion.span layout="position" className="mt-1 block text-sm text-ink/70">
@@ -193,7 +201,7 @@ export default function Speakers() {
                 </motion.li>
               );
             })}
-            <PitchCard cells={edition.list.length + (open ? 1 : 0)} pitch={pitch} />
+            <PitchCard cells={edition.list.length + (open ? 1 : 0)} pitch={pitch} featured={featured} />
           </ul>
         </LayoutGroup>
       )}

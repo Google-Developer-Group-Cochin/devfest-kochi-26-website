@@ -11,8 +11,8 @@
           "role": "Co-founder",
           "org": "Stac",
           "badges": [
-            "Google Developer Expert (Flutter & Dart)",
-            "Organizer, Flutter Abu Dhabi & Dubai"
+            "GDE, Flutter & Dart",
+            "Organizer, Flutter UAE"
           ],
           "talk": "TBA. Title loading from the server. Please enjoy this spinner.",
           "track": "",
@@ -24,7 +24,7 @@
           "role": "Sr. Enterprise AI & Cloud Engineer",
           "org": "Motive",
           "badges": [
-            "Google Developer Expert (Cloud)",
+            "GDE, Cloud",
             "Google Cloud Champion Innovator"
           ],
           "talk": "TBA. Deploying the title… build failed. Retrying in the cloud.",
@@ -51,7 +51,7 @@
           "role": "Founder & AI Consultant",
           "org": "Kanishka IT",
           "badges": [
-            "Google Developer Expert (AI/ML)",
+            "GDE, AI/ML",
             "Women Techmakers Ambassador"
           ],
           "talk": "TBA. We asked an AI for the title. It replied “Great question!” and nothing else.",

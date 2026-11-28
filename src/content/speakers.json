@@ -143,6 +143,9 @@
           "name": "G Pavithra",
           "role": "Senior Technical Member",
           "org": "TANUH-AI, IISc Bangalore",
+          "badges": [
+            "NIT Trichy"
+          ],
           "talk": "TBA. Still converging. Gradient descent says just one more step.",
           "track": "",
           "linkedin": "https://www.linkedin.com/in/g-pavithra-703522191",
@@ -153,8 +156,7 @@
           "role": "Pre-Seed Investments",
           "org": "y0",
           "badges": [
-            "Ex-Lead, Friends of Figma India",
-            "Ex-Founder's Office"
+            "Ex-Lead, Friends of Figma India"
           ],
           "talk": "TBA. Title is in stealth mode. Raising a pre-seed round to reveal it.",
           "track": "",

@@ -91,7 +91,8 @@
           "role": "Principal Software Maintenance Engineer",
           "org": "Red Hat",
           "badges": [
-            "Speaker & Tech Blogger"
+            "Speaker & Tech Blogger",
+            "Ex-Technology Analyst, Infosys"
           ],
           "talk": "TBA. The title is under maintenance. Have you tried turning it off and on again?",
           "track": "",
@@ -129,7 +130,9 @@
           "role": "DevSecOps Engineer",
           "org": "Daimler Truck Innovation Center India",
           "badges": [
-            "Women Techmakers Ambassador"
+            "Women Techmakers Ambassador",
+            "AWS Solutions Architect",
+            "Azure Security Engineer"
           ],
           "talk": "TBA. The title failed the security scan. Redacted until further notice.",
           "track": "",
@@ -139,7 +142,7 @@
         {
           "name": "G Pavithra",
           "role": "Senior Technical Member",
-          "org": "TANUH-AI, IISc",
+          "org": "TANUH-AI, IISc Bangalore",
           "talk": "TBA. Still converging. Gradient descent says just one more step.",
           "track": "",
           "linkedin": "https://www.linkedin.com/in/g-pavithra-703522191",
@@ -150,7 +153,8 @@
           "role": "Pre-Seed Investments",
           "org": "y0",
           "badges": [
-            "Ex-Lead, Friends of Figma India"
+            "Ex-Lead, Friends of Figma India",
+            "Ex-Founder's Office"
           ],
           "talk": "TBA. Title is in stealth mode. Raising a pre-seed round to reveal it.",
           "track": "",
@@ -177,11 +181,14 @@
           "talk": "TBA. It works on my machine. The title has not been deployed yet.",
           "track": "",
           "linkedin": "https://www.linkedin.com/in/mathews-shaji",
-          "photo": "/speakers/mathews-shaji-2026.jpg"
+          "photo": "/speakers/mathews-shaji-2026.jpg",
+          "badges": [
+            "Ex-Full Stack Developer, xmigrate"
+          ]
         },
         {
           "name": "Nikhil K Menon",
-          "role": "AI/ML Intern",
+          "role": "",
           "org": "Orion Innovation",
           "badges": [
             "Ex-Research Intern, IIT Palakkad"

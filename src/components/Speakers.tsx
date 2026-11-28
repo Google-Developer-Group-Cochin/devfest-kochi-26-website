@@ -97,7 +97,7 @@ export default function Speakers() {
           <Sticker id="kathakali" className="h-24 w-auto shrink-0 sm:h-36" tilt={8} />
         </div>
         <p className="max-w-[40ch] text-lg text-ink/75">
-          {speakers.intro} {pitch}.
+          {speakers.intro}
         </p>
       </div>
 

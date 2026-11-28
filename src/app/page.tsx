@@ -9,7 +9,7 @@ import Nav from "@/components/Nav";
 import Organizers from "@/components/Organizers";
 import Speakers from "@/components/Speakers";
 import Venue from "@/components/Venue";
-import { event, seoDescription, siteUrl } from "@/content/site";
+import { event, seoDescription, showTba, siteUrl } from "@/content/site";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -46,7 +46,7 @@ export default function Home() {
       <main id="main">
         <Hero />
         <Intro />
-        <ComingSoon />
+        {showTba.lineup && <ComingSoon />}
         <Speakers />
         <Organizers />
         <BadgeMaker />

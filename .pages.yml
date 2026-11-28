@@ -88,10 +88,13 @@ content:
                 summary: "{name} ({org})"
             fields:
               - { name: name, type: string, required: true }
-              - { name: role, type: string }
-              - { name: org, label: Company or community, type: string }
+              - { name: role, label: Job title, type: string, description: "One title only, e.g. Senior Cloud Engineer" }
+              - { name: org, label: Company or community, type: string, description: Shown in bold after the job title. }
+              - { name: badges, label: Other titles, type: string, list: true, description: "2026 cards only. One short title per entry, e.g. Women Techmakers Ambassador" }
               - { name: talk, label: Talk title, type: string }
               - { name: track, component: track, description: Leave empty if the talk isn't known yet. }
+              - { name: bio, label: Short bio, type: text, description: "For the 2026 cards and the share sheet. Leave empty for past editions." }
+              - { name: linkedin, label: LinkedIn URL, type: string, description: "Full profile URL, e.g. https://www.linkedin.com/in/…" }
               - { name: photo, type: image, options: { media: speakers }, description: Square photo works best. Leave empty to show initials. }
 
   - name: agenda

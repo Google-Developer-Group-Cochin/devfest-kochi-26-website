@@ -1,11 +1,206 @@
 {
-  "intro": "The '26 lineup is being finalised. Want to be on it?",
+  "intro": "The first speakers for '26 are in. Talk titles are still a closely guarded secret.",
   "editions": [
     {
       "year": "2026",
       "title": "Meet the 2026 speakers",
-      "comingSoon": true,
-      "list": []
+      "comingSoon": false,
+      "list": [
+        {
+          "name": "Divyanshu Bhargava",
+          "role": "Co-founder",
+          "org": "Stac",
+          "badges": [
+            "GDE, Flutter & Dart",
+            "Organizer, Flutter UAE"
+          ],
+          "talk": "TBA. Title loading from the server. Please enjoy this spinner.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/divyanshub024",
+          "photo": "/speakers/divyanshu-bhargava-2026.jpg"
+        },
+        {
+          "name": "Sanket Bisne",
+          "role": "Sr. Enterprise AI & Cloud Engineer",
+          "org": "Motive",
+          "badges": [
+            "GDE, Cloud",
+            "Google Cloud Champion Innovator"
+          ],
+          "talk": "TBA. Deploying the title… build failed. Retrying in the cloud.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/sanketbisne",
+          "photo": "/speakers/sanket-bisne-2026.jpg"
+        },
+        {
+          "name": "Salman Faris",
+          "role": "Community",
+          "org": "Screenly",
+          "badges": [
+            "Edge Impulse Expert",
+            "Qualcomm Ambassador",
+            "Co-founder, MakerGram"
+          ],
+          "talk": "TBA. This talk is stuck in a breadboard. Please don't touch the jumper wires.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/salmanfarisvp",
+          "photo": "/speakers/salman-faris-2026.jpg"
+        },
+        {
+          "name": "Geeta Kakrani",
+          "role": "Founder & AI Consultant",
+          "org": "Kanishka IT",
+          "badges": [
+            "GDE, AI/ML",
+            "Women Techmakers Ambassador"
+          ],
+          "talk": "TBA. We asked an AI for the title. It replied “Great question!” and nothing else.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/geetakakrani",
+          "photo": "/speakers/geeta-kakrani-2026.jpg"
+        },
+        {
+          "name": "Adarsh K Kumar",
+          "role": "Principal Product Engineer",
+          "org": "Rapido",
+          "badges": [
+            "Co-organizer, CNCG Kochi",
+            "Co-organizer, AAIF Kochi"
+          ],
+          "talk": "TBA. Your title is on the way. The captain is two minutes away, for the last ten minutes.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/adarshkkumar",
+          "photo": "/speakers/adarsh-k-kumar-2026.jpg"
+        },
+        {
+          "name": "Ansil H",
+          "role": "AI Operations Technical Lead",
+          "org": "Cisco",
+          "badges": [
+            "Kubestronaut",
+            "Co-organizer, CNCG Kochi",
+            "Co-organizer, AAIF Kochi"
+          ],
+          "talk": "TBA. The AI platform is still thinking about the title. Do not refresh.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/ansilh",
+          "photo": "/speakers/ansil-h-2026.jpg"
+        },
+        {
+          "name": "Sudhish Nair",
+          "role": "Principal Software Maintenance Engineer",
+          "org": "Red Hat",
+          "badges": [
+            "Speaker & Tech Blogger",
+            "Ex-Technology Analyst, Infosys"
+          ],
+          "talk": "TBA. The title is under maintenance. Have you tried turning it off and on again?",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/sudhishnnair",
+          "photo": "/speakers/sudhish-nair-2026.jpg"
+        },
+        {
+          "name": "Vishnu K S",
+          "role": "Senior Infra Engineer",
+          "org": "DP World",
+          "badges": [
+            "Co-organizer, CNCG Kochi",
+            "Co-organizer, AAIF Kochi",
+            "Founder, xmigrate"
+          ],
+          "talk": "TBA. The title is still in transit. It's somewhere between two ports.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/iamvishnuks",
+          "photo": "/speakers/vishnu-k-s-2026.jpg"
+        },
+        {
+          "name": "Akash Kamerkar",
+          "role": "Senior Data Scientist",
+          "org": "ABB",
+          "badges": [
+            "Founding Member, DevRelSquad"
+          ],
+          "talk": "TBA. Our model predicts the title with 99% confidence. It is wrong.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/akash-kamerkar-datascientist",
+          "photo": "/speakers/akash-kamerkar-2026.jpg"
+        },
+        {
+          "name": "Poushali Chattopadhyay",
+          "role": "DevSecOps Engineer",
+          "org": "Daimler Truck Innovation Center India",
+          "badges": [
+            "Women Techmakers Ambassador",
+            "AWS Solutions Architect",
+            "Azure Security Engineer"
+          ],
+          "talk": "TBA. The title failed the security scan. Redacted until further notice.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/poushali-chattopadhyay",
+          "photo": "/speakers/poushali-chattopadhyay-2026.jpg"
+        },
+        {
+          "name": "G Pavithra",
+          "role": "Senior Technical Member",
+          "org": "TANUH-AI, IISc Bangalore",
+          "badges": [
+            "NIT Trichy"
+          ],
+          "talk": "TBA. Still converging. Gradient descent says just one more step.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/g-pavithra-703522191",
+          "photo": "/speakers/g-pavithra-2026.jpg"
+        },
+        {
+          "name": "Advaith U",
+          "role": "Pre-Seed Investments",
+          "org": "y0",
+          "badges": [
+            "Ex-Lead, Friends of Figma India"
+          ],
+          "talk": "TBA. Title is in stealth mode. Raising a pre-seed round to reveal it.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/advaithu",
+          "photo": "/speakers/advaith-u-2026.jpg"
+        },
+        {
+          "name": "Yash Thakare",
+          "role": "Software Engineer",
+          "org": "Liferay",
+          "badges": [
+            "Google AI Mentor",
+            "Full Stack Developer & AI Engineer"
+          ],
+          "talk": "TBA. Will be finished five minutes before the deadline, hackathon style.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/yashthakare",
+          "photo": "/speakers/yash-thakare-2026.jpg"
+        },
+        {
+          "name": "Mathews Shaji",
+          "role": "Senior Platform Engineering Lead",
+          "org": "CloudPositive",
+          "talk": "TBA. It works on my machine. The title has not been deployed yet.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/mathews-shaji",
+          "photo": "/speakers/mathews-shaji-2026.jpg",
+          "badges": [
+            "Ex-Full Stack Developer, xmigrate"
+          ]
+        },
+        {
+          "name": "Nikhil K Menon",
+          "role": "",
+          "org": "Orion Innovation",
+          "badges": [
+            "Ex-Research Intern, IIT Palakkad"
+          ],
+          "talk": "TBA. Five agents are debating the title. A Raspberry Pi has the casting vote.",
+          "track": "",
+          "linkedin": "https://www.linkedin.com/in/nikhil-k-menon",
+          "photo": "/speakers/nikhil-k-menon-2026.jpg"
+        }
+      ]
     },
     {
       "year": "2025",
